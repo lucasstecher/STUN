@@ -5,7 +5,7 @@ module.exports = (sequelize, Dataypes) => {
             allowNull: false
         },
         score: {
-            type: Dataypes.STRING,
+            type: Dataypes.INTEGER,
             allowNull: false
         }
     });
