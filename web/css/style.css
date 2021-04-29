@@ -13,7 +13,10 @@
 body {
   font-family: "Exo", sans-serif;
   font-size: 87%;
-  background-color: #ef653b;
+
+  background: url("https://i.pinimg.com/originals/74/8a/63/748a638f380e7ef615ae0f5a08089676.jpg");
+
+  background-repeat: no-repeat;
   color: var(--text-color);
   height: 100vh;
 }
@@ -28,7 +31,7 @@ body {
   width: 90%;
   height: 190px;
   margin-top: 15px;
-  background-color: var(--bg-color);
+  background-color: rgba(92, 184, 225, 0.4);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -54,7 +57,7 @@ body {
   width: 90%;
   padding: 15px 0;
   margin-top: 15px;
-  background-color: var(--bg-color);
+  background-color: rgba(92, 184, 225, 0.4);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -64,27 +67,30 @@ body {
 .primeiro__deck {
   width: 221px;
   height: 340px;
-  background: linear-gradient(rgb(93, 94, 170), rgb(93, 66, 103));
+  background: url("https://i.pinimg.com/564x/dd/52/f7/dd52f71e5d9ef3856c4851271bf33508.jpg");
+  background-size: cover;
   text-align: center;
-  /* margin: 15px 0 15px 0; */
+
   border-radius: 10px;
 }
 
 .segundo__deck {
   width: 221px;
   height: 340px;
-  background-color: #d2aa1c;
+  background: url("https://i.pinimg.com/originals/2d/07/30/2d073065f0ed8ff551c0c57f9b4449bb.jpg");
+  background-size: cover;
   text-align: center;
-  /* margin: 0 0 15px 0; */
+
   border-radius: 10px;
 }
 
 .terceiro__deck {
   width: 221px;
   height: 340px;
-  background-color: #3f9e12;
+  background: url("https://cdn.discordapp.com/attachments/835240908806291476/837146281192456192/ce7210f01338eb848dfae52752b2c537.png");
+  background-size: cover;
   text-align: center;
-  /* margin-bottom: 15px; */
+
   border-radius: 10px;
 }
 .deck__title {
@@ -96,6 +102,7 @@ body {
 
 .deck__title h2 {
   margin: 10px 0;
+  letter-spacing: 0.2rem;
 }
 
 footer {
@@ -103,6 +110,10 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    background: url("https://bandodequadrados.com/img/imagem_noticia/9a6e854bd45a88c7e5c620e280c59515.jpg");
+    background-size: cover;
+  }
   .container {
     z-index: 5;
     max-width: 980px;
@@ -113,7 +124,7 @@ footer {
   .container__informacao {
     width: 75%;
     height: 300px;
-    background-color: var(--bg-color);
+    background-color: rgba(92, 184, 225, 0.4);
     border-radius: 18px;
     margin-top: 40px;
     display: flex;
@@ -142,7 +153,7 @@ footer {
     height: 500px;
 
     margin-top: 64px;
-    background-color: var(--bg-color);
+    background-color: rgba(92, 184, 225, 0.4);
     border-radius: 18px;
     display: flex;
     flex-direction: row;
@@ -153,9 +164,10 @@ footer {
   .primeiro__deck {
     width: 200px;
     height: 320px;
-    background-color: #d35353;
+    background: url("https://i.pinimg.com/564x/dd/52/f7/dd52f71e5d9ef3856c4851271bf33508.jpg");
+    background-size: cover;
     text-align: center;
-    /* margin: 15px 30px 15px 0; */
+
     border-radius: 10px;
     cursor: pointer;
   }
@@ -163,9 +175,10 @@ footer {
   .segundo__deck {
     width: 200px;
     height: 320px;
-    background-color: #d2aa1c;
+    background: url("https://i.pinimg.com/originals/2d/07/30/2d073065f0ed8ff551c0c57f9b4449bb.jpg");
+    background-size: cover;
     text-align: center;
-    /* margin: 15px 30px 15px 0; */
+
     border-radius: 10px;
     cursor: pointer;
   }
@@ -173,10 +186,10 @@ footer {
   .terceiro__deck {
     width: 200px;
     height: 320px;
-    background-color: #3f9e12;
+    background: url("https://cdn.discordapp.com/attachments/835240908806291476/837146281192456192/ce7210f01338eb848dfae52752b2c537.png");
+    background-size: cover;
     text-align: center;
     border-radius: 10px;
-    /* margin: 15px 0px 15px 0; */
     cursor: pointer;
   }
 
@@ -188,10 +201,11 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(63, 26, 26, 0.2);
+    background-color: rgba(63, 26, 26, 0.5);
   }
 
   footer {
     margin: 20px 0 0 0;
+    letter-spacing: 0.12rem;
   }
 }
