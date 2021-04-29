@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:700");
+@import url("https://fonts.googleapis.com/css?family=Abel");
+:root {
+  --bg-div-btn: #ee5253;
+  --text-primary: #ffffff;
+  --text-secondary: #000000;
+}
+
+body {
+  /* background-color: #dfe6e9; */
+  background-image: url("https://i.pinimg.com/originals/f5/4b/0d/f54b0d9d056f432251c9b7ba80164db6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  transform: perspective(900px);
+  transform-style: preserve-3d;
+  margin-top: 140px;
+}
+
+.tela-jogo__title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tela-jogo__title span {
+  color: var(--text-primary);
+  font-family: "Exe", sans-serif;
+  text-shadow: 1px 1px 2px black, 0 0 1em #000, 0 0 0.2em #000;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+.tela-jogo__title h1 {
+  font-size: 50px;
+  font-family: "Exo", sans-serif;
+  color: var(--text-primary);
+  text-shadow: 1px 1px 2px black, 0 0 1em #000, 0 0 0.2em #000;
+}
+
+.tela-jogo__card1 {
+  border-radius: 15px;
+  text-align: center;
+
+  left: 100px;
+  width: 250px;
+  height: 350px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(rgb(93, 94, 170), rgb(93, 66, 103));
+  animation: animate 1s linear infinite;
+  transition: 0.6s;
+
+  transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.tela-jogo__card1 div {
+  margin-bottom: 4px;
+  background-color: var(--bg-div-btn);
+  font-family: "Abel", sans-serif;
+  color: var(--text-primary);
+  margin-left: 10px;
+  padding-left: 10px;
+  text-align: justify;
+  width: 200px;
+  transform: translatex(12px);
+}
+
+.card1-hover {
+  transform: rotatex(0deg);
+  transition: 0.6s;
+
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tela-jogo__card1 img {
+  transform: translateY(15px);
+  width: 180px;
+  height: 150px;
+}
+
+h3 {
+  font-size: 25px;
+  font-family: "Abel", sans-serif;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 2px rgb(255, 255, 255);
+  transform: translatey(10px);
+}
+
+p {
+  font-family: "Abel", sans-serif;
+  color: var(--text-primary);
+  text-align: center;
+  width: 220px;
+  transform: translatex(12px);
+}
+
+.tela-jogo__card2 {
+  border-radius: 15px;
+  text-align: center;
+  left: 550px;
+  width: 250px;
+  height: 350px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(rgb(93, 94, 170), rgb(93, 66, 103));
+  animation: animate 1s linear infinite;
+  transition: 0.6s;
+  opacity: 0.2;
+  transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.tela-jogo__card2 div {
+  margin-bottom: 4px;
+
+  background-color: var(--bg-div-btn);
+  font-family: "Abel", sans-serif;
+  color: var(--text-primary);
+  margin-left: 10px;
+  padding-left: 10px;
+  text-align: justify;
+  width: 200px;
+  transform: translatex(12px);
+}
+
+.card2-hover {
+  transform: rotatex(0deg);
+  transition: 0.6s;
+  opacity: 1;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tela-jogo__card2 img {
+  transform: translateY(15px);
+  width: 180px;
+  height: 150px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .tela-jogo__title h1 {
+    font-size: 30px;
+  }
+
+  .tela-jogo__card1 {
+    transform: rotatex(61deg) translatey(-200px) translatez(-100px);
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
+  }
+
+  .card1-hover {
+    transform: rotatex(0deg);
+    transition: 0.6s;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  }
+  .teala-jogo__vs {
+    display: block;
+    height: 0px;
+    margin-top: 0px;
+  }
+  body {
+    background-size: auto;
+  }
+}
+
+.tela-jogo__content > h3 {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  font-family: "Exe", sans-serif;
+  text-shadow: 1px 1px 2px black, 0 0 1em #000, 0 0 0.2em #000;
+}
+
+.teala-jogo__vs {
+  color: var(--text-primary);
+  font-size: 25px;
+  font-family: "Exe", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px black, 0 0 1em #000, 0 0 0.2em #000;
+}
+
+#tela-jogo__rodada {
+  margin-left: 5px;
+  color: #ffe600;
+}
+
+/* .footer {
+  position: absolute;
+  top: 500px;
+  margin: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.footer h2 {
+  font-size: 18px;
+  font-family: "Exo", sans-serif;
+} */
