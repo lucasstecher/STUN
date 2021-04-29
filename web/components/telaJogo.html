@@ -1,40 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STUN - Super Trunfo</title>
-</head>
-<body>
-  <div class="container">
-    <div>
-      <h2>Player</h2>
-      <div class="costa__carta">
-
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style-tela-jogo.css" />
+    <title>STUN - Super Trunfo</title>
+  </head>
+  <body>
+    <div class="tela-jogo__title">
+      <h1>STUN - Super Trunfo</h1>
+      <span>clique na carta e escolha o atributo</span>
+    </div>
+    <div class="container">
+      <div class="tela-jogo__content" id="card-click">
+        <h3>Jogador</h3>
+        <div class="tela-jogo__card1" id="card1">
+          <img src="https://i.ibb.co/wKQ10sj/naruto.jpg" alt="Naruto" />
+          <h3>Naruto Uzumaki</h3>
+          <div id="ninjutsu">Ninjutsu: 40</div>
+          <div>Taijutsu: 35</div>
+          <div>Genjutsu: 20</div>
+          <div>Inteligência: 30</div>
+        </div>
       </div>
-      <div class="frente__carta">
-        <div class="imagem__carta"><img src="https://i.ibb.co/wKQ10sj/naruto.jpg" alt=""></div>
-        <div class="atributos__carta"><span>Ninjutsu</span></div>
-        <div class="atributos__carta"><span>Taijutsu</span></div>
-        <div class="atributos__carta"><span>Genjutsu</span></div>
-        <div class="atributos__carta"><span>Inteligência</span></div>
+      <h3 class="teala-jogo__vs">
+        rodada<span id="tela-jogo__rodada">01</span>
+      </h3>
+
+      <div class="tela-jogo__content" id="tela-jogo__content-cpu">
+        <h3>CPU</h3>
+        <div class="tela-jogo__card2" id="card2">
+          <img src="https://i.ibb.co/nLKWHWb/kakashi.jpg" alt="Naruto" />
+          <h3>Issac o Poderoso</h3>
+          <div>Ninjutsu: 50</div>
+          <div>Taijutsu: 45</div>
+          <div>Genjutsu: 40</div>
+          <div>Inteligência: 50</div>
+        </div>
       </div>
     </div>
-    <div><p>VS</p></div>
-    <div>
-      <h2>CPU</h2>
-      <div class="costa__carta">
 
-      </div>
-      <div class="frente__carta">
-        <div class="imagem__carta"><img src="https://i.ibb.co/wKQ10sj/naruto.jpg" alt=""></div>
-        <div class="atributos__carta"><span>Ninjutsu</span></div>
-        <div class="atributos__carta"><span>Taijutsu</span></div>
-        <div class="atributos__carta"><span>Genjutsu</span></div>
-        <div class="atributos__carta"><span>Inteligência</span></div>
-      </div>
-    </div>
-  </div>
-</body>
+    <div class="footer"></div>
+
+    <script>
+      const element = document.getElementById("card-click");
+      const elementCard = document.getElementById("card1");
+
+      element.addEventListener("click", (e) => {
+        elementCard.classList.add("card1-hover");
+      });
+
+      const element2 = document.getElementById("card2");
+      const escolha = document.getElementById("ninjutsu");
+
+      escolha.addEventListener("click", (e) => {
+        element2.classList.add("card2-hover");
+      });
+    </script>
+  </body>
 </html>
