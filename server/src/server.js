@@ -9,6 +9,9 @@ app.use(express.json());
 const playerRoute = require('./routes/playerRoute');
 app.use(playerRoute);
 
+const narutoRoute = require('./routes/narutoRoute');
+app.use(narutoRoute);
+
 db.sequelize.sync().then(() => {
     app.listen('3000', () => {
         console.log('Server is running');
