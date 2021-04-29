@@ -161,7 +161,12 @@ p {
     transform: rotatex(61deg) translatey(-200px) translatez(-100px);
     box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
   }
-
+  .tela-jogo__card2 {
+    opacity: 0.2;
+  }
+  .card2-hover {
+    opacity: 1;
+  }
   .card1-hover {
     transform: rotatex(0deg);
     transition: 0.6s;
@@ -173,9 +178,15 @@ p {
     height: 0px;
     margin-top: 0px;
   }
+
+  .tela-jogo__title span {
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 13px;
+  }
+
   body {
     background: url("https://i.pinimg.com/originals/a6/c9/1c/a6c91c7d41bfc9fafaacde0f0a18145d.jpg");
-    background-size: cover;
   }
 }
 
