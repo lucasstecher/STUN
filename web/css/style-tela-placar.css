@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* vh é o que o usuário enxerga na tela */
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-geral{
+    width: 980px;
+    height: 600px;
+    background: #AAD8D3;
+    border-radius: 25px;
+}
