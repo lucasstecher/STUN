@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Exo', sans-serif;
+}
+
 /* vh é o que o usuário enxerga na tela */
+
 
 .main{
     width: 100%;
@@ -16,8 +23,38 @@
 }
 
 .div-geral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     width: 980px;
     height: 600px;
-    background: #AAD8D3;
+    background-color: #AAD8D3;
     border-radius: 25px;
+}
+
+/* .jogadores div se aplica aos filhos da classe .jogadores (div) */
+
+.jogadores div{
+    height: 40px;
+    width: 300px;
+    background-color: #393E46;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    color:  #EEEEEE;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.medalha {
+    padding: 0;
+    width: 30px ;
+    height: 30px ;
+    border-radius: 50% ;
+}
+
+.medalha > span{
+    background-color: #E6CA67;
 }
