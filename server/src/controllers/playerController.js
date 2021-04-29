@@ -25,5 +25,38 @@ module.exports = {
         } catch (error) {
             response.json({ Error_name: error.name});
         }
+    },
+    async update (request , response) {
+        const { id } = request.params;
+
+        try {
+            const newPlayer = await db.Player.findByPk(id);
+            if(newPlayer){
+                const player = await newPlayer.update(request.body);
+                response.json(player);
+            }
+
+            response.status(204).json({ message: "player not found"});
+
+        } catch (error) {
+            response.json({ error_name: error.name});
+        }
+    },
+    async destroy (request, response) {
+        const { id } = request.params;
+
+        try {
+            const player = await db.Player.findByPk(id);
+
+            if(player) {   
+                await player.destroy();
+                response.json({ message: "deleted"});
+            }
+
+            response.status(204).json({ message: "player not found"});
+        } catch (error) {
+            response.json({ error_name: error.name});
+        }
     }
+
 }
