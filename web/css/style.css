@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:700");
 :root {
   --bg-color: #aad8d3;
   --text-color: #fff;
@@ -10,9 +11,9 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Exo", sans-serif;
   font-size: 87%;
-  background-color: rebeccapurple;
+  background-color: #ef653b;
   color: var(--text-color);
   height: 100vh;
 }
@@ -63,7 +64,7 @@ body {
 .primeiro__deck {
   width: 221px;
   height: 340px;
-  background-color: #d35353;
+  background: linear-gradient(rgb(93, 94, 170), rgb(93, 66, 103));
   text-align: center;
   /* margin: 15px 0 15px 0; */
   border-radius: 10px;
@@ -187,7 +188,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(63, 26, 26, 0.2);
   }
 
   footer {
