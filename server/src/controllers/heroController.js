@@ -16,5 +16,14 @@ module.exports = {
         } catch (error) {
             response.json({ Error_name: error.name});
         }
+    },
+    async store (request, response) {
+        try {
+            const hero = await db.Hero.create(request.body);   
+            response.status(201).json(hero);        
+        } catch (error) {
+            response.json({ Error_name: error.name});
+        }
     }
+
 }
