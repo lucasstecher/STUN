@@ -115,7 +115,7 @@ p {
   background: linear-gradient(rgb(93, 94, 170), rgb(93, 66, 103));
   animation: animate 1s linear infinite;
   transition: 0.6s;
-  opacity: 0.2;
+  opacity: 0.15;
   transform: rotatex(75deg) translatey(-200px) translatez(-100px);
   box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
 }
@@ -174,7 +174,8 @@ p {
     margin-top: 0px;
   }
   body {
-    background-size: auto;
+    background: url("https://i.pinimg.com/originals/a6/c9/1c/a6c91c7d41bfc9fafaacde0f0a18145d.jpg");
+    background-size: cover;
   }
 }
 
