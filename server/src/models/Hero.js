@@ -1,5 +1,5 @@
 module.exports = (sequelize, Datatypes) => {
-    const Heroi = sequelize.define("Heroi", {
+    const Hero = sequelize.define("Hero", {
         name: {
             type: Datatypes.STRING,
             allowNull: false
@@ -26,5 +26,5 @@ module.exports = (sequelize, Datatypes) => {
         }
     });
 
-    return Heroi;
+    return Hero;
 }
