@@ -1,4 +1,5 @@
 const db = require("../models");
+const { update } = require("./playerController");
 const PAGINATION_START = 0;
 const PAGINATION_LIMIT = 20;
 
@@ -21,6 +22,22 @@ module.exports = {
         try {
             const card = await db.Futebol.create(request.body);
             response.status(201).json(card);
+        } catch (error) {
+            response.json({ Error_name: error.name });
+        }
+    },
+    async update (request, response) {
+        const { id } = request.params;
+
+        try {
+            const newCard = await db.Futebol.findByPk(id);
+            if(newCard){
+                const card = await newCard.update(request.body);
+                response.json(card);
+            }
+            
+            response.status(404).json({ message: "card not found!"});
+            
         } catch (error) {
             response.json({ Error_name: error.name });
         }
