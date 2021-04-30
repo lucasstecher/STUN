@@ -8,41 +8,42 @@
     <title>STUN - Super Trunfo</title>
   </head>
   <body>
-    <div class="tela-jogo__title">
-      <h1>STUN - Super Trunfo</h1>
-      <span>clique na carta e escolha o atributo</span>
-    </div>
-    <div class="container">
-      <div class="tela-jogo__content" id="card-click">
-        <h3>Jogador</h3>
-        <div class="tela-jogo__card1" id="card1">
-          <img src="https://i.ibb.co/wKQ10sj/naruto.jpg" alt="Naruto" />
-          <h3>Naruto Uzumaki</h3>
-          <div id="ninjutsu">Ninjutsu: 40</div>
-          <div>Taijutsu: 35</div>
-          <div>Genjutsu: 20</div>
-          <div>Inteligência: 30</div>
+    <div class="tela-jogo__container">
+      <div class="tela-jogo__title">
+        <h1>STUN - Super Trunfo</h1>
+        <span>clique na carta e escolha o atributo</span>
+      </div>
+      <div class="tela-jogo__container-cartas">
+        <div class="tela-jogo__content" id="card-click">
+          <h3>Jogador</h3>
+          <div class="tela-jogo__card1" id="card1">
+            <img src="https://i.ibb.co/wKQ10sj/naruto.jpg" alt="Naruto" />
+            <h3>Naruto Uzumaki</h3>
+            <div id="ninjutsu">Ninjutsu: 40</div>
+            <div>Taijutsu: 35</div>
+            <div>Genjutsu: 20</div>
+            <div>Inteligência: 30</div>
+          </div>
+        </div>
+        <h3 class="teala-jogo__vs">
+          rodada<span id="tela-jogo__rodada">01</span>
+        </h3>
+
+        <div class="tela-jogo__content" id="tela-jogo__content-cpu">
+          <h3>CPU</h3>
+          <div class="tela-jogo__card2" id="card2">
+            <img src="https://i.ibb.co/wKQ10sj/naruto.jpg" alt="Naruto" />
+            <h3>Shikamaru</h3>
+            <div>Ninjutsu: 50</div>
+            <div>Taijutsu: 45</div>
+            <div>Genjutsu: 40</div>
+            <div>Inteligência: 50</div>
+          </div>
         </div>
       </div>
-      <h3 class="teala-jogo__vs">
-        rodada<span id="tela-jogo__rodada">01</span>
-      </h3>
 
-      <div class="tela-jogo__content" id="tela-jogo__content-cpu">
-        <h3>CPU</h3>
-        <div class="tela-jogo__card2" id="card2">
-          <img src="https://i.ibb.co/wKQ10sj/naruto.jpg" alt="Naruto" />
-          <h3>Shikamaru</h3>
-          <div>Ninjutsu: 50</div>
-          <div>Taijutsu: 45</div>
-          <div>Genjutsu: 40</div>
-          <div>Inteligência: 50</div>
-        </div>
-      </div>
+      <div class="footer"></div>
     </div>
-
-    <div class="footer"></div>
-
     <script>
       const element = document.getElementById("card-click");
       const elementCard = document.getElementById("card1");
