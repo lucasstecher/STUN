@@ -18,7 +18,6 @@ body {
   color: var(--text-color);
   height: 100vh;
   background-position-x: center;
-  
 }
 
 .container {
@@ -106,7 +105,7 @@ footer {
   padding: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   body {
     background: url("https://images5.alphacoders.com/103/1036489.jpg");
     background-size: cover;
@@ -147,11 +146,11 @@ footer {
   }
 
   .container__deck {
-    width: 65%;  /*reduzi de 75 para 60*/
+    width: 65%; /*reduzi de 75 para 60*/
     height: 500px;
     margin-top: 30px;
     /* background-color: rgba(92, 184, 225, 0.4); */
-    background-color:#1f867085;
+    background-color: #1f867085;
     border: 2px solid black;
     border-radius: 18px;
     display: flex;
