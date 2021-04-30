@@ -15,6 +15,9 @@ app.use(narutoRoute);
 const heroRoute = require('./routes/heroRoute');
 app.use(heroRoute);
 
+const futebolRoute = require('./routes/futebolRoute');
+app.use(futebolRoute);
+
 db.sequelize.sync().then(() => {
     app.listen('3000', () => {
         console.log('Server is running');
