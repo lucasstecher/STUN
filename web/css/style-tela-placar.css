@@ -8,6 +8,8 @@
 
 body{
     font-family: 'Exo', sans-serif;
+    background-image: url("https://images-ext-1.discordapp.net/external/jW3y3tM8wzcHkPeaNW78kL4D4QYp6PkB1Wzd6tUpaXQ/https/static.cdprojektred.com/cms.cdprojektred.com/16x9_big/a28633a699e653e3cdd11a9c015db53195b72378-1280x720.png?width=1202&height=676");
+    background-size: cover;
 }
 
 h1{
@@ -15,6 +17,17 @@ h1{
     font-weight: normal;
     text-shadow: 1px 1px 2px black;
     color: #393E46;
+}
+
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(63, 26, 26, 0.3);
 }
 
 /* vh é o que o usuário enxerga na tela */
@@ -27,6 +40,9 @@ h1{
     justify-content: center;
 }
 
+.scoreboard{
+    color: #EEEEEE;
+}
 
 .div-geral{
     display: flex;
@@ -35,9 +51,10 @@ h1{
     justify-content: space-around;
     width: 980px;
     height: 600px;
-    background-color: #AAD8D3;
+    background-color: #1f867085;
     border-radius: 25px;
     position: relative;
+    border: 2px solid #000;
 }
 
 .botao-voltar{
@@ -47,9 +64,9 @@ h1{
     position: absolute;
     left: 870px;
     top: 40px;
-    background-color: #00ADB5;
-    width: 60px;
-    height: 60px;
+    background-color: #00640081;
+    width: 70px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,10 +94,11 @@ h1{
     padding: 10px;
     text-shadow: 1px 1px 2px black;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
 }
 
 #medalha1 {
-    background-color: #E6CA67;
+    background-color: #FFd700;
     padding: 0;
     width: 40px;
     height: 40px;
@@ -89,7 +107,7 @@ h1{
 }
 
 #medalha2 {
-    background-color: #A5A1A1;
+    background-color: #c0c0c0;
     padding: 0;
     width: 40px;
     height: 40px;
@@ -98,7 +116,7 @@ h1{
 }
 
 #medalha3 {
-    background-color: #C67D3A;
+    background-color: #b87333;
     padding: 0;
     width: 40px;
     height: 40px;
@@ -109,7 +127,7 @@ h1{
 .score{
     font-size: 2rem;
     text-shadow: 1px 1px 2px black;
-    color: #393E46;
+    color: #EEEEEE;
 }
 
 @media screen and (max-width: 767px) {
