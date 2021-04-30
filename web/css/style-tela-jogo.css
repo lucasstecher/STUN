@@ -167,6 +167,8 @@ p {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    transform: perspective(900px);
+    transform-style: preserve-3d;
     -moz-transform: perspective(900px);
     -moz-transform-style: preserve-3d;
     -webkit-transform: perspective(900px);
