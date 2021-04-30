@@ -30,10 +30,10 @@ module.exports = {
         const { id } = request.params;
 
         try {
-            const newCard = await db.Futebol.findByPk(id);
-            if(newCard){
-                const card = await newCard.update(request.body);
-                response.json(card);
+            const card = await db.Futebol.findByPk(id);
+            if(card){
+                const newCard = await card.update(request.body);
+                response.json(newCard);
             }
             
             response.status(404).json({ message: "card not found!"});

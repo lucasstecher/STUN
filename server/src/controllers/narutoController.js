@@ -29,13 +29,13 @@ module.exports = {
         const { id } = request.params;
 
         try {
-            const newCard = await db.Naruto.findByPk(id);
-            if(newCard){
-                const card = await newCard.update(request.body);
-                response.json(card);
+            const card = await db.Naruto.findByPk(id);
+            if(card){
+                const newCard = await card.update(request.body);
+                response.json(newCard);
             }
 
-            response.status(204).json({ message: "player not found"});
+            response.status(404).json({ message: "card not found!"});
 
         } catch (error) {
             response.json({ error_name: error.name});
@@ -52,7 +52,7 @@ module.exports = {
                 response.json({ message: "deleted"});
             }
 
-            response.status(204).json({ message: "player not found"});
+            response.status(404).json({ message: "card not found!"});
         } catch (error) {
             response.json({ error_name: error.name});
         }
