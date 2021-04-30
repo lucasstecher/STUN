@@ -12,9 +12,15 @@ module.exports = {
                 offset: start,
                 limit: limit
             });
-
             response.status(206).json(deck);
-
+        } catch (error) {
+            response.json({ Error_name: error.name });
+        }
+    },
+    async store (request, response) {
+        try {
+            const card = await db.Futebol.create(request.body);
+            response.status(201).json(card);
         } catch (error) {
             response.json({ Error_name: error.name });
         }
