@@ -24,6 +24,22 @@ module.exports = {
         } catch (error) {
             response.json({ Error_name: error.name});
         }
+    },
+    async update (request , response) {
+        const { id } = request.params;
+
+        try {
+            const newHero = await db.Hero.findByPk(id);
+            if(newHero){
+                const hero = await newHero.update(request.body);
+                response.json(hero);
+            }
+
+            response.status(204).json({ message: "player not found"});
+
+        } catch (error) {
+            response.json({ error_name: error.name});
+        }
     }
 
 }
