@@ -7,7 +7,6 @@
 }
 
 body {
-  /* background-color: #dfe6e9; */
   background-image: url("https://i.pinimg.com/originals/f5/4b/0d/f54b0d9d056f432251c9b7ba80164db6.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -146,7 +145,7 @@ p {
   height: 150px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -187,6 +186,101 @@ p {
 
   body {
     background: url("https://i.pinimg.com/originals/a6/c9/1c/a6c91c7d41bfc9fafaacde0f0a18145d.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .tela-jogo__title h1 {
+    font-size: 30px;
+  }
+
+  .tela-jogo__card1 {
+    transform: rotatex(61deg) translatey(-200px) translatez(-100px);
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
+  }
+  .tela-jogo__card2 {
+    opacity: 0.2;
+  }
+  .card2-hover {
+    opacity: 1;
+  }
+  .card1-hover {
+    transform: rotatex(0deg);
+    transition: 0.6s;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  }
+  .teala-jogo__vs {
+    display: block;
+    height: 0px;
+    margin-top: 0px;
+  }
+
+  .tela-jogo__title span {
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 13px;
+  }
+
+  body {
+    background: url("https://i.pinimg.com/originals/a6/c9/1c/a6c91c7d41bfc9fafaacde0f0a18145d.jpg");
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1336px) and (max-width: 1440px) {
+  .tela-jogo__card1 {
+    width: 170px;
+    height: 250px;
+  }
+
+  .tela-jogo__card1 div {
+    margin-left: 5px;
+    padding-left: 9px;
+
+    width: 130px;
+  }
+
+  .tela-jogo__card1 img {
+    width: 100px;
+    height: 80px;
+  }
+
+  .tela-jogo__card1 h3 {
+    font-size: 17px;
+  }
+
+  .tela-jogo__card2 {
+    width: 170px;
+    height: 250px;
+  }
+
+  .tela-jogo__card2 div {
+    margin-left: 5px;
+    padding-left: 9px;
+
+    width: 130px;
+  }
+
+  .tela-jogo__card2 img {
+    width: 100px;
+    height: 80px;
+  }
+
+  .tela-jogo__card2 h3 {
+    font-size: 17px;
+  }
+
+  body {
+    background-image: url("https://i.pinimg.com/originals/f5/4b/0d/f54b0d9d056f432251c9b7ba80164db6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
