@@ -174,6 +174,10 @@ p {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    -moz-transform: perspective(900px);
+    -moz-transform-style: preserve-3d;
+    -webkit-transform: perspective(900px);
+    -webkit-transform-style: preserve-3d;
   }
 
   .tela-jogo__title h1 {
