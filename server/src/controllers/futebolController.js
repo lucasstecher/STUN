@@ -1,5 +1,5 @@
 const db = require("../models");
-const { update } = require("./playerController");
+const { update, destroy } = require("./playerController");
 const PAGINATION_START = 0;
 const PAGINATION_LIMIT = 20;
 
@@ -38,6 +38,21 @@ module.exports = {
             
             response.status(404).json({ message: "card not found!"});
             
+        } catch (error) {
+            response.json({ Error_name: error.name });
+        }
+    },
+    async destroy (request, response) {
+        const { id } = request.params;
+        try {
+            const card = await db.Futebol.findByPk(id);
+
+            if(card){
+                await card.destroy();
+                response.json({ message: "deleted"});
+            }
+
+            response.status(404).json({ message: "card not found!"});
         } catch (error) {
             response.json({ Error_name: error.name });
         }
