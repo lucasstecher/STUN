@@ -1,6 +1,6 @@
 const db = require("../models");
 const PAGINATION_START = 0;
-const PAGINATION_LIMIT = 3;
+const PAGINATION_LIMIT = 20;
 
 module.exports = {
     async index (request, response) {
