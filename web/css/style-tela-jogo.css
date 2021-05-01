@@ -16,7 +16,7 @@
   padding: 28px;
   width: 100%;
   height: 100vh;
-  background-image: url("https://i.pinimg.com/originals/f5/4b/0d/f54b0d9d056f432251c9b7ba80164db6.jpg");
+  background-image: url("https://i.ibb.co/26vBL4z/1036489.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -59,6 +59,9 @@
   text-shadow: 1px 1px 2px black, 0 0 1em #000, 0 0 0.2em #000;
 }
 
+.tela-jogo__cards {
+  background: linear-gradient(rgb(93, 94, 170), rgb(93, 66, 103));
+}
 .tela-jogo__card1 {
   border-radius: 15px;
   text-align: center;
@@ -68,7 +71,7 @@
   height: 350px;
   margin-top: 10px;
   margin-bottom: 10px;
-  background: linear-gradient(rgb(93, 94, 170), rgb(93, 66, 103));
+
   animation: animate 1s linear infinite;
   transition: 0.6s;
 
@@ -126,7 +129,7 @@ p {
   height: 350px;
   margin-top: 10px;
   margin-bottom: 10px;
-  background: linear-gradient(rgb(93, 94, 170), rgb(93, 66, 103));
+  /* background: linear-gradient(rgb(93, 94, 170), rgb(93, 66, 103)); */
   animation: animate 1s linear infinite;
   transition: 0.6s;
   opacity: 0.15;

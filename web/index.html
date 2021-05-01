@@ -12,20 +12,32 @@
       <div class="container">
         <header class="container__informacao">
           <h1>STUN - Super Trunfo</h1>
-          <input type="text" placeholder="Nickname" />
+          <input type="text" placeholder="Nickname" required />
         </header>
         <main class="container__deck">
-          <div class="deck__title">
-            <h2>Naruto</h2>
-            <div class="primeiro__deck"></div>
-          </div>
-          <div class="deck__title">
-            <h2 class="deck__title">Heróis</h2>
-            <div class="segundo__deck"></div>
-          </div>
-          <div class="deck__title">
-            <h2 class="deck__title">Futebol</h2>
-            <div class="terceiro__deck"></div>
+          <h3>Selecione um deck para iniciar partida</h3>
+          <div class="decks">
+            <div class="deck__title">
+              <h2>Naruto</h2>
+              <div
+                class="primeiro__deck"
+                onclick="chamarTelaJogo('deck1')"
+              ></div>
+            </div>
+            <div class="deck__title">
+              <h2 class="deck__title">Heróis</h2>
+              <div
+                class="segundo__deck"
+                onclick="chamarTelaJogo('deck2')"
+              ></div>
+            </div>
+            <div class="deck__title">
+              <h2 class="deck__title">Futebol</h2>
+              <div
+                class="terceiro__deck"
+                onclick="chamarTelaJogo('deck3')"
+              ></div>
+            </div>
           </div>
         </main>
         <footer>
@@ -33,5 +45,6 @@
         </footer>
       </div>
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
