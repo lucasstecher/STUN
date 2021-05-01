@@ -4,6 +4,9 @@ const CARD_COLOR_HERO = "#1780a1";
 const URL_FUTEBOL =
   "https://i.ibb.co/yhPGJNY/e6640249f7ca7d4cd9a03d317267b37f.jpg";
 const CARD_COLOR_FUTEBOL = "#7b2cbf";
+const URL_NARUTO_DECK = "http://localhost:3000/narutoCards";
+const URL_HEROES_DECK = "http://localhost:3000/heroesCards";
+const URL_FUTEBOL_DECK = "http://localhost:3000/futebolCards";
 
 backgroundSelector();
 
@@ -34,6 +37,47 @@ document.addEventListener("DOMContentLoaded", async () => {
     value.addEventListener("click", attributeSelection);
   });
 });
+
+document.addEventListener("DOMContentLoaded", async () => {
+  cardFirstClick();
+
+  const attributes = document.querySelectorAll(".atr-player-card");
+  attributes.forEach((value) => {
+    value.addEventListener("click", attributeSelection);
+  });
+});
+
+async function getCards() {
+  let deck = queryString();
+  switch (deck) {
+    case "cardNaruto":
+      cards = await useGet(URL_NARUTO_DECK);
+      break;
+    case "cardHero":
+      cards = await useGet(URL_HEROES_DECK);
+      break;
+    case "cardFutebol":
+      cards = await useGet(URL_FUTEBOL_DECK);
+      break;
+  }
+
+  return cards;
+}
+
+function changeCard(card) {
+  let deck = queryString();
+  switch (deck) {
+    case "cardNaruto":
+      changeCardNaruto(card);
+      break;
+    case "cardHero":
+      changeCardHeroes(card);
+      break;
+    case "cardFutebol":
+      changeCardFutebol(card);
+      break;
+  }
+}
 
 async function useGet(url) {
   const response = await fetch(url);
@@ -71,6 +115,7 @@ function changeCardFutebol(card) {
   PlayerCard[4].innerHTML = `Drible: ${card.dribbling}`;
   PlayerCard[5].innerHTML = `Fisico: ${card.physical}`;
 }
+
 function queryString() {
   const urlParams = new URLSearchParams(location.search);
   const deck = urlParams.get("deck");
