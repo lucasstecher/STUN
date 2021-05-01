@@ -54,13 +54,16 @@
   text-shadow: 1px 1px 2px black, 0 0 1em #000, 0 0 0.2em #000;
   font-weight: 700;
   letter-spacing: 0.2rem;
+  margin-top: 27px;
 }
 
-.tela-jogo__title h1 {
-  font-size: 50px;
-  font-family: "Exo", sans-serif;
-  color: var(--text-primary);
-  text-shadow: 1px 1px 2px black, 0 0 1em #000, 0 0 0.2em #000;
+.tela-jogo__title #logo {
+  width: 250px;
+  height: 170px;
+  background: url("https://i.ibb.co/yQsqVPz/STUN.png") no-repeat;
+  background-size: contain;
+  margin-bottom: -60px;
+  z-index: 999;
 }
 
 .tela-jogo__cards {
@@ -88,7 +91,7 @@
   margin-bottom: 4px;
   background-color: var(--bg-div-btn);
   font-family: "Abel", sans-serif;
-  color: var(--text-primary);
+  color: rgb(224, 213, 213);
   margin-left: 10px;
   padding-left: 10px;
   text-align: justify;
@@ -112,7 +115,7 @@
 h3 {
   font-size: 25px;
   font-family: "Abel", sans-serif;
-  color: rgb(255, 255, 255);
+  color: rgb(224, 213, 213);
   text-shadow: 0 0 2px rgb(255, 255, 255);
   transform: translatey(10px);
   margin-bottom: 30px;
@@ -134,7 +137,6 @@ p {
   height: 350px;
   margin-top: 10px;
   margin-bottom: 10px;
-  /* background: linear-gradient(rgb(93, 94, 170), rgb(93, 66, 103)); */
   animation: animate 1s linear infinite;
   transition: 0.6s;
   opacity: 0.15;
@@ -177,8 +179,6 @@ p {
     margin-top: 10px;
     transform: perspective(900px);
     transform-style: preserve-3d;
-    -moz-transform: perspective(900px);
-    -moz-transform-style: preserve-3d;
     -webkit-transform: perspective(900px);
     -webkit-transform-style: preserve-3d;
   }
@@ -210,6 +210,7 @@ p {
   }
 
   .tela-jogo__title span {
+    margin-top: 27px;
     text-align: center;
     word-wrap: break-word;
     font-size: 13px;
@@ -218,12 +219,14 @@ p {
   .tela-jogo__container {
     height: 100%;
     background: url("https://i.pinimg.com/originals/a6/c9/1c/a6c91c7d41bfc9fafaacde0f0a18145d.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
 /*-- Tela Tablet */
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .tela-jogo__container-cartas {
     display: flex;
     flex-direction: column;
@@ -257,6 +260,7 @@ p {
   }
 
   .tela-jogo__title span {
+    margin-top: 27px;
     text-align: center;
     word-wrap: break-word;
     font-size: 13px;
@@ -341,16 +345,3 @@ p {
   margin-left: 5px;
   color: #ffe600;
 }
-
-/* .footer {
-  position: absolute;
-  top: 500px;
-  margin: 10px;
-  width: 100%;
-  text-align: center;
-}
-
-.footer h2 {
-  font-size: 18px;
-  font-family: "Exo", sans-serif;
-} */

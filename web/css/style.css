@@ -208,7 +208,6 @@ body {
 }
 
 @media screen and (max-width: 1366px) {
-
   #logo {
     width: 250px;
     height: 170px;
@@ -246,14 +245,13 @@ body {
   .container__deck {
     width: 55%;
     border: 2px solid black;
-
   }
 
   .deck__title {
     font-size: 18px;
     margin-top: 0;
   }
-  
+
   .primeiro__deck {
     width: 125px;
     height: 190px;
@@ -283,11 +281,9 @@ body {
     border-radius: 10px;
     cursor: pointer;
   }
-
 }
 
 @media screen and (max-width: 1024px) {
-
   #logo {
     width: 250px;
     height: 170px;
@@ -344,7 +340,7 @@ body {
     font-size: 18px;
     margin-top: 0;
   }
-  
+
   .primeiro__deck {
     width: 125px;
     height: 190px;
@@ -374,12 +370,10 @@ body {
     border-radius: 10px;
     cursor: pointer;
   }
-
 }
 
-
 @media screen and (max-width: 854px) {
-
-body {
-  background: url("https://i.ibb.co/tD75xLh/Sin-t-tulo-2.jpg");
+  body {
+    background: url("https://i.ibb.co/tD75xLh/Sin-t-tulo-2.jpg");
+  }
 }
