@@ -6,10 +6,32 @@ const CARD_COLOR_FUTEBOL = "#7b2cbf";
 
 backgroundSelector();
 
-document.addEventListener('DOMContentLoaded', () => {
-  cardFirstClick();
-  const attributes = document.querySelectorAll('.atr-player-card');
+document.addEventListener('DOMContentLoaded', async () => {
+  let deck = queryString();
+  let cards;
+  switch(deck) {
+    case 'cardNaruto':
+      cards = await useGet("http://localhost:3000/narutoCards");
+      changeCardNaruto(cards[0]);
+      break ;
+    case 'cardHero':
+      cards = await useGet("http://localhost:3000/heroesCards");
+      changeCardHeroes(cards[0]);
+      break;
+    case 'cardFutebol':
+      cards = await useGet("http://localhost:3000/futebolCards");
+      changeCardFutebol(cards[0]);
+      break;
+  }
+  
+  console.log(cards)
 
+
+  
+  
+  cardFirstClick();
+  
+  const attributes = document.querySelectorAll('.atr-player-card');
   attributes.forEach( value => {
     value.addEventListener('click', attributeSelection);
   });
@@ -17,7 +39,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+async function useGet(url) {
+  const response = await fetch(url) 
+  const cards = await response.json();
+  
+  return cards;
+}
 
+function changeCardNaruto(card) {
+  const PlayerCard = document.querySelectorAll("#card1 > *");
+  PlayerCard[0].src = card.image;
+  PlayerCard[1].innerHTML = card.name;
+  PlayerCard[2].innerHTML = `Ninjutsu: ${card.ninjutsu}`
+  PlayerCard[3].innerHTML = `Taijutsu: ${card.taijutsu}`
+  PlayerCard[4].innerHTML = `Genjutsu: ${card.genjutsu}`
+  PlayerCard[5].innerHTML = `Inteligência: ${card.intelligence}`
+}
+
+function changeCardHeroes(card) {
+  const PlayerCard = document.querySelectorAll("#card1 > *");
+  PlayerCard[0].src = card.image;
+  PlayerCard[1].innerHTML = card.name;
+  PlayerCard[2].innerHTML = `Velocidade: ${card.velocity}`
+  PlayerCard[3].innerHTML = `Especial: ${card.special}`
+  PlayerCard[4].innerHTML = `Força: ${card.strength}`
+  PlayerCard[5].innerHTML = `Inteligência: ${card.intelligence}`
+}
+
+function changeCardFutebol(card) {
+  const PlayerCard = document.querySelectorAll("#card1 > *");
+  PlayerCard[0].src = card.image;
+  PlayerCard[1].innerHTML = card.name;
+  PlayerCard[2].innerHTML = `Ritmo: ${card.pace}`
+  PlayerCard[3].innerHTML = `Finalização: ${card.shooting}`
+  PlayerCard[4].innerHTML = `Drible: ${card.dribbling}`
+  PlayerCard[5].innerHTML = `Fisico: ${card.physical}`
+}
 function queryString() {
   const urlParams = new URLSearchParams(location.search);
   const deck = urlParams.get('deck');
