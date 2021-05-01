@@ -15,11 +15,27 @@ function queryString(param) {
   }
 }
 
+function cardClick() {
+  const element = document.getElementById("card-click");
+  const elementCard = document.getElementById("card1");
+
+  element.addEventListener("click", (e) => {
+    elementCard.classList.add("card1-hover");
+  });
+
+  const element2 = document.getElementById("card2");
+  const escolha = document.getElementById("ninjutsu");
+
+  escolha.addEventListener("click", (e) => {
+    element2.classList.add("card2-hover");
+  });
+}
+
 function mudarBackground() {
-  let variavel = queryString("minhaVariavel");
-  console.log(variavel);
+  let variavel = queryString("select-deck");
+
   let background = document.querySelector(".tela-jogo__container");
-  let backgroundCard = document.querySelector(".tela-jogo__cards");
+  let backgroundCard = document.getElementsByClassName("tela-jogo__cards");
 
   if (variavel === "deck1") {
     background.style.backgroundImage =
@@ -27,11 +43,17 @@ function mudarBackground() {
   } else if (variavel === "deck2") {
     background.style.backgroundImage =
       "url('https://i.ibb.co/c2CsvNN/wallup-net.jpg')";
-    backgroundCard.style.background = "#1780a1";
+    for (let i = 0; i < backgroundCard.length; i++) {
+      backgroundCard[i].style.background = "#1780a1";
+    }
   } else if (variavel === "deck3") {
     background.style.backgroundImage = background.style.backgroundImage =
       "url('https://i.ibb.co/yhPGJNY/e6640249f7ca7d4cd9a03d317267b37f.jpg')";
+    for (let i = 0; i < backgroundCard.length; i++) {
+      backgroundCard[i].style.background = "#7b2cbf";
+    }
   }
 }
 
 mudarBackground();
+cardClick();

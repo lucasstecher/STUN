@@ -66,6 +66,7 @@
 .tela-jogo__cards {
   background: linear-gradient(rgb(93, 94, 170), rgb(93, 66, 103));
 }
+
 .tela-jogo__card1 {
   border-radius: 15px;
   text-align: center;
@@ -213,9 +214,7 @@ p {
     word-wrap: break-word;
     font-size: 13px;
   }
-  /* .container {
-    background-image: none;
-  } */
+
   .tela-jogo__container {
     height: 100%;
     background: url("https://i.pinimg.com/originals/a6/c9/1c/a6c91c7d41bfc9fafaacde0f0a18145d.jpg");
