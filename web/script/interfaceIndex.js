@@ -4,23 +4,23 @@ document.addEventListener('DOMContentLoaded', () => {
   let hero = document.getElementById("cardHero");
   let futebol = document.getElementById("cardFutebol");
 
-  naruto.addEventListener('click', chamarTelaJogo);
-  hero.addEventListener('click', chamarTelaJogo);
-  futebol.addEventListener('click', chamarTelaJogo);
+  naruto.addEventListener('click', gameDocument);
+  hero.addEventListener('click', gameDocument);
+  futebol.addEventListener('click', gameDocument);
 
 });
 
-function chamarTelaJogo(e) {
+function gameDocument(e) {
   let deck = e.target.id;
-  let nickname = pegarNome();
+  let nickname = getName();
   window.location = `http://127.0.0.1:5501/web/components/telaJogo.html?deck=${deck}&nickname=${nickname}`;
 }
 
-function pegarNome() {
-  let nomeValor = document.querySelector("#inputNome");
-  let nome = nomeValor.value;
-  if (nome) {
-    return nome;
+function getName() {
+  let nameValue = document.querySelector("#inputNome");
+  let name = nameValue.value;
+  if (name) {
+    return name;
   }
-  return "anonimo";
+  return "Anônimo";
 }
