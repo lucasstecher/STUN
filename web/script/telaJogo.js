@@ -124,6 +124,12 @@ function attributeSelection(e) {
   const element = document.getElementById("card2");
   element.classList.add("card2-hover");
   setTimeout(cardReturn, 1000);
+  let attribueValue = parseInt(e.target.innerHTML.split(' ')[1]);
+  console.log(attribueValue);
+}
+
+function attributeSelectionCPU(e){
+
 }
 
 function backgroundSelector() {
