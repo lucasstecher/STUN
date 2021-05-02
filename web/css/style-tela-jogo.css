@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Exo:700");
 @import url("https://fonts.googleapis.com/css?family=Abel");
+
 :root {
   --bg-div-btn: #ee5253;
   --text-primary: #ffffff;
@@ -19,6 +20,7 @@
   background-image: url("https://i.ibb.co/26vBL4z/1036489.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  position: fixed;
 }
 
 .tela-jogo__container-cartas {
@@ -191,18 +193,22 @@ p {
     transform: rotatex(61deg) translatey(-200px) translatez(-100px);
     box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
   }
+
   .tela-jogo__card2 {
     opacity: 0.2;
   }
+
   .card2-hover {
     opacity: 1;
   }
+
   .card1-hover {
     transform: rotatex(0deg);
     transition: 0.6s;
 
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   }
+
   .teala-jogo__vs {
     display: block;
     height: 0px;
@@ -221,6 +227,8 @@ p {
     background: url("https://i.pinimg.com/originals/a6/c9/1c/a6c91c7d41bfc9fafaacde0f0a18145d.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 35%;
+    position: unset;
   }
 }
 
@@ -241,18 +249,22 @@ p {
     transform: rotatex(61deg) translatey(-200px) translatez(-100px);
     box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
   }
+
   .tela-jogo__card2 {
     opacity: 0.2;
   }
+
   .card2-hover {
     opacity: 1;
   }
+
   .card1-hover {
     transform: rotatex(0deg);
     transition: 0.6s;
 
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   }
+
   .teala-jogo__vs {
     display: block;
     height: 0px;
@@ -270,6 +282,7 @@ p {
     height: 100%;
     background: url("https://i.pinimg.com/originals/a6/c9/1c/a6c91c7d41bfc9fafaacde0f0a18145d.jpg");
     background-size: cover;
+    position: unset;
   }
 }
 
@@ -325,7 +338,7 @@ p {
   }
 }
 
-.tela-jogo__content > h3 {
+.tela-jogo__content>h3 {
   text-align: center;
   text-transform: uppercase;
   color: var(--text-primary);
