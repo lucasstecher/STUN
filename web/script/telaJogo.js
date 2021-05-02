@@ -11,24 +11,7 @@ const URL_FUTEBOL_DECK = "http://localhost:3000/futebolCards";
 backgroundSelector();
 
 document.addEventListener("DOMContentLoaded", async () => {
-  let deck = queryString();
-  let cards;
-  switch (deck) {
-    case "cardNaruto":
-      cards = await useGet("http://localhost:3000/narutoCards");
-      changeCardNaruto(cards[0]);
-      break;
-    case "cardHero":
-      cards = await useGet("http://localhost:3000/heroesCards");
-      changeCardHeroes(cards[0]);
-      break;
-    case "cardFutebol":
-      cards = await useGet("http://localhost:3000/futebolCards");
-      changeCardFutebol(cards[0]);
-      break;
-  }
-
-  console.log(cards);
+  
 
   cardFirstClick();
 
@@ -62,6 +45,13 @@ async function getCards() {
   }
 
   return cards;
+}
+
+function cardReturn () {
+  const cardPlayer = document.getElementById("card1");
+  const cardCPU = document.getElementById("card2");
+  cardPlayer.classList.remove("card1-hover");
+  cardCPU.classList.remove("card2-hover");
 }
 
 function changeCard(card) {
@@ -133,6 +123,7 @@ function cardFirstClick() {
 function attributeSelection(e) {
   const element = document.getElementById("card2");
   element.classList.add("card2-hover");
+  setTimeout(cardReturn, 1000);
 }
 
 function backgroundSelector() {
