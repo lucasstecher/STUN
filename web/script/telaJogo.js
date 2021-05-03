@@ -147,21 +147,11 @@ function attributeSelection(e) {
 
   if (attributeValue > attributeValueCPU) {
     pontosJogador += 50;
-    if (pontosCpu <= 0) {
-      pontosCpu = 0;
-    } else {
-      pontosCpu -= 10;
-    }
 
     console.log("Player WIN!");
   } else {
     pontosCpu += 50;
 
-    if (pontosJogador <= 0) {
-      pontosJogador = 0;
-    } else {
-      pontosJogador -= 10;
-    }
     console.log("Player LOSE!");
   }
 
