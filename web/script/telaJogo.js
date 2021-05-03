@@ -128,8 +128,8 @@ function attributeSelection(e) {
   element.classList.add("card2-hover");
   setTimeout(cardReturn, 1500);
   let attributeValue = parseInt(e.target.innerHTML.split(' ')[1]);
-  let attributeValueCPU = attributeSelectionCPU();
-
+  let attributeName = e.target.innerHTML.split(':')[0]
+  let attributeValueCPU = attributeCPUCompare(attributeName);
   if(attributeValue > attributeValueCPU){
     console.log("Player WIN!");
   } else {
@@ -138,7 +138,19 @@ function attributeSelection(e) {
 
 }
 
-function attributeSelectionCPU(){
+function attributeCPUCompare(attributeName) {
+  const attributesDivCPU = document.querySelectorAll('.atr-cpu-card');
+  let valueAttribute;
+  attributesDivCPU.forEach(value => {
+    let attributeNameCPU = value.innerHTML.split(':')[0];
+    if( attributeName == attributeNameCPU) {
+      valueAttribute = parseInt(value.innerHTML.split(' ')[1]);
+    }
+  });
+  return valueAttribute;
+}
+
+function attributeSelectionByCPU(){
   const attributesDivCPU = document.querySelectorAll('.atr-cpu-card');
   let attributeSelected = 0;
   attributesDivCPU.forEach(value => {
