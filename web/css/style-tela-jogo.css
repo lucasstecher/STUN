@@ -63,7 +63,7 @@
 }
 
 .tela-jogo__cards {
-  background: linear-gradient(rgb(93, 94, 170), rgb(93, 66, 103));
+  background: transparent;
 }
 
 .tela-jogo__card1 {
