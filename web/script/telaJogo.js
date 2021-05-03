@@ -2,7 +2,7 @@ const URL_NARUTO = "https://i.ibb.co/2YPMPcw/wp5845402.jpg";
 const URL_HERO = "https://i.ibb.co/c2CsvNN/wallup-net.jpg";
 const CARD_COLOR_HERO = "#1780a1";
 const URL_FUTEBOL =
-  "https://i.ibb.co/yhPGJNY/e6640249f7ca7d4cd9a03d317267b37f.jpg";
+  "https://c.wallhere.com/photos/37/e8/Neymar_JR_Neymar_Paris_Saint_Germain_P_S_G_soccer-1389397.jpg!d";
 const CARD_COLOR_FUTEBOL = "#7b2cbf";
 const URL_NARUTO_DECK = "http://localhost:3000/narutoCards";
 const URL_HEROES_DECK = "http://localhost:3000/heroesCards";
@@ -126,7 +126,7 @@ function cardFirstClick() {
 function attributeSelection(e) {
   const element = document.getElementById("card2");
   element.classList.add("card2-hover");
-  setTimeout(cardReturn, 1500);
+  setTimeout(cardReturn, 2000);
   let attributeValue = parseInt(e.target.innerHTML.split(' ')[1]);
   let attributeName = e.target.innerHTML.split(':')[0]
   let attributeValueCPU = attributeCPUCompare(attributeName);
