@@ -15,10 +15,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   cardFirstClick();
 
-  const attributes = document.querySelectorAll(".atr-player-card");
-  attributes.forEach((value) => {
-    value.addEventListener("click", attributeSelection);
-  });
+
 });
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -118,18 +115,39 @@ function cardFirstClick() {
   element.addEventListener("click", (e) => {
     elementCard.classList.add("card1-hover");
   });
+
+  const attributes = document.querySelectorAll(".atr-player-card");
+  attributes.forEach((value) => {
+    value.addEventListener("click", attributeSelection);
+  });
+
 }
 
 function attributeSelection(e) {
   const element = document.getElementById("card2");
   element.classList.add("card2-hover");
-  setTimeout(cardReturn, 1000);
-  let attribueValue = parseInt(e.target.innerHTML.split(' ')[1]);
-  console.log(attribueValue);
+  setTimeout(cardReturn, 1500);
+  let attributeValue = parseInt(e.target.innerHTML.split(' ')[1]);
+  let attributeValueCPU = attributeSelectionCPU();
+
+  if(attributeValue > attributeValueCPU){
+    console.log("Player WIN!");
+  } else {
+    console.log("Player LOSE!");
+  }
+
 }
 
-function attributeSelectionCPU(e){
-
+function attributeSelectionCPU(){
+  const attributesDivCPU = document.querySelectorAll('.atr-cpu-card');
+  let attributeSelected = 0;
+  attributesDivCPU.forEach(value => {
+    let attributeValue = parseInt(value.innerHTML.split(' ')[1]);
+    if( attributeValue > attributeSelected) {
+      attributeSelected = attributeValue;
+    }
+  });
+    return attributeSelected;
 }
 
 function backgroundSelector() {
