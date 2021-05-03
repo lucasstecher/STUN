@@ -11,8 +11,6 @@ const URL_FUTEBOL_DECK = "http://localhost:3000/futebolCards";
 backgroundSelector();
 
 document.addEventListener("DOMContentLoaded", async () => {
-  
-
   cardFirstClick();
 
 
@@ -161,6 +159,27 @@ function attributeSelectionByCPU(){
   });
     return attributeSelected;
 }
+
+// dividir cartas com o posicionamento aleatorio
+async function deckDivision(){
+  let deck = await getCards();
+  deck = deck.sort(() => {
+    return 0.5 - Math.random()
+  });
+  const deckPlayer = deck.slice(0, 9);
+  const deckCPU = deck.slice(10, 19);
+
+  console.log(deckPlayer);
+  console.log(deckCPU);
+}
+
+// ajustando o deck após jogada
+function winMove(deckWinner, deckLoser){
+  let playerCard = deckWinner.shift();
+  deckWinner.push(playerCard);
+  deckWinner.push(deckLoser.shift);
+}
+
 
 function backgroundSelector() {
   let deck = queryString();
