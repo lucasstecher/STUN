@@ -31,13 +31,7 @@
   justify-content: space-around;
   align-items: center;
   transform: perspective(900px);
-  -moz-transform: perspective(900px);
-  -moz-transform-style: preserve-3d;
-  -webkit-transform: perspective(900px);
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -moz-transform: perspective(900px);
-  -moz-transform-style: preserve-3d;
   -webkit-transform: perspective(900px);
   -webkit-transform-style: preserve-3d;
   margin-top: 170px;
@@ -338,7 +332,7 @@ p {
   }
 }
 
-.tela-jogo__content>h3 {
+.tela-jogo__content > h3 {
   text-align: center;
   text-transform: uppercase;
   color: var(--text-primary);
