@@ -26,7 +26,7 @@ async function getCards() {
     return cards;
   }
 
-  function changeCard(card) {
+  function changeCardPlayer(card) {
     let deck = queryString();
     switch (deck) {
       case "cardNaruto":

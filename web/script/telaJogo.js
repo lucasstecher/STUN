@@ -1,8 +1,11 @@
 let pontosJogador = 0;
 let pontosCpu = 0;
 let rounds = 1;
+let deckPlayer = [];
+let deckCPU = [];
 
 document.addEventListener("DOMContentLoaded", async () => {
+  await deckDivision();
   firstClick();
 });
 
@@ -32,12 +35,13 @@ function updateRound() {
   let roundsDiplay = document.querySelector("#tela-jogo__rodada");
   rounds += 1;
   roundsDiplay.innerHTML = rounds;
+  changeCardPlayer(deckPlayer[0]);
 }
 
 function updateScore() {
-  let plcarPlayer = document.querySelector("#jogador-placar");
-  let placarCpu = document.querySelector("#cpu-placar");
-  plcarPlayer.innerHTML = pontosJogador;
+  let placarPlayer = document.getElementById("jogador-placar");
+  let placarCpu = document.getElementById("cpu-placar");
+  placarPlayer.innerHTML = pontosJogador;
   placarCpu.innerHTML = pontosCpu;
 }
 
@@ -51,12 +55,10 @@ function attributeSelection(e) {
 
   if (attributeValue > attributeValueCPU) {
     pontosJogador += 50;
-
-    console.log("Player WIN!");
+    winMove(deckPlayer, deckCPU);
   } else {
     pontosCpu += 50;
-
-    console.log("Player LOSE!");
+    winMove(deckCPU, deckPlayer);
   }
 
   updateScore();
@@ -93,17 +95,14 @@ async function deckDivision() {
   deck = deck.sort(() => {
     return 0.5 - Math.random();
   });
-  const deckPlayer = deck.slice(0, 9);
-  const deckCPU = deck.slice(10, 19);
-
-  console.log(deckPlayer);
-  console.log(deckCPU);
+  deckPlayer = deck.slice(0, 10);
+  deckCPU = deck.slice(10, 20);
 }
 
 // ajustando o deck após jogada
 function winMove(deckWinner, deckLoser) {
   let playerCard = deckWinner.shift();
   deckWinner.push(playerCard);
-  deckWinner.push(deckLoser.shift);
+  deckWinner.push(deckLoser.shift());
 }
 
