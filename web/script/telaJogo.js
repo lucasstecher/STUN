@@ -11,9 +11,9 @@ const URL_FUTEBOL_DECK = "http://localhost:3000/futebolCards";
 
 backgroundSelector();
 
-document.addEventListener("DOMContentLoaded", async () => {
-  cardFirstClick();
-});
+// document.addEventListener("DOMContentLoaded", async () => {
+//   cardFirstClick();
+// });
 
 document.addEventListener("DOMContentLoaded", async () => {
   cardFirstClick();
@@ -46,6 +46,7 @@ function cardReturn() {
   const cardCPU = document.getElementById("card2");
   cardPlayer.classList.remove("card1-hover");
   cardCPU.classList.remove("card2-hover");
+  updateRoud();
 }
 
 function changeCard(card) {
@@ -119,6 +120,23 @@ function cardFirstClick() {
   });
 }
 
+let pontosJogador = 0;
+let pontosCpu = 0;
+let rounds = 1;
+
+function updateRoud() {
+  let roundsDiplay = document.querySelector("#tela-jogo__rodada");
+  rounds += 1;
+  roundsDiplay.innerHTML = rounds;
+}
+
+function updateScore() {
+  let plcarPlayer = document.querySelector("#jogador-placar");
+  let placarCpu = document.querySelector("#cpu-placar");
+  plcarPlayer.innerHTML = pontosJogador;
+  placarCpu.innerHTML = pontosCpu;
+}
+
 function attributeSelection(e) {
   const element = document.getElementById("card2");
   element.classList.add("card2-hover");
@@ -126,11 +144,28 @@ function attributeSelection(e) {
   let attributeValue = parseInt(e.target.innerHTML.split(" ")[1]);
   let attributeName = e.target.innerHTML.split(":")[0];
   let attributeValueCPU = attributeCPUCompare(attributeName);
+
   if (attributeValue > attributeValueCPU) {
+    pontosJogador += 50;
+    if (pontosCpu <= 0) {
+      pontosCpu = 0;
+    } else {
+      pontosCpu -= 10;
+    }
+
     console.log("Player WIN!");
   } else {
+    pontosCpu += 50;
+
+    if (pontosJogador <= 0) {
+      pontosJogador = 0;
+    } else {
+      pontosJogador -= 10;
+    }
     console.log("Player LOSE!");
   }
+
+  updateScore();
 }
 
 function attributeCPUCompare(attributeName) {
@@ -142,6 +177,7 @@ function attributeCPUCompare(attributeName) {
       valueAttribute = parseInt(value.innerHTML.split(" ")[1]);
     }
   });
+
   return valueAttribute;
 }
 
