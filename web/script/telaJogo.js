@@ -1,92 +1,21 @@
-const URL_NARUTO_DECK = "http://localhost:3000/narutoCards";
-const URL_HEROES_DECK = "http://localhost:3000/heroesCards";
-const URL_FUTEBOL_DECK = "http://localhost:3000/futebolCards";
 let pontosJogador = 0;
 let pontosCpu = 0;
 let rounds = 1;
 
 document.addEventListener("DOMContentLoaded", async () => {
-  cardFirstClick();
+  firstClick();
 });
 
-async function getCards() {
-  let deck = queryString();
-  switch (deck) {
-    case "cardNaruto":
-      cards = await useGet(URL_NARUTO_DECK);
-      break;
-    case "cardHero":
-      cards = await useGet(URL_HEROES_DECK);
-      break;
-    case "cardFutebol":
-      cards = await useGet(URL_FUTEBOL_DECK);
-      break;
-  }
 
-  return cards;
-}
-
-function cardReturn() {
+function positionReturn() {
   const cardPlayer = document.getElementById("card1");
   const cardCPU = document.getElementById("card2");
   cardPlayer.classList.remove("card1-hover");
   cardCPU.classList.remove("card2-hover");
-  updateRoud();
+  updateRound();
 }
 
-function changeCard(card) {
-  let deck = queryString();
-  switch (deck) {
-    case "cardNaruto":
-      changeCardNaruto(card);
-      break;
-    case "cardHero":
-      changeCardHeroes(card);
-      break;
-    case "cardFutebol":
-      changeCardFutebol(card);
-      break;
-  }
-}
-
-async function useGet(url) {
-  const response = await fetch(url);
-  const cards = await response.json();
-
-  return cards;
-}
-
-function changeCardNaruto(card) {
-  const PlayerCard = document.querySelectorAll("#card1 > *");
-  PlayerCard[0].src = card.image;
-  PlayerCard[1].innerHTML = card.name;
-  PlayerCard[2].innerHTML = `Ninjutsu: ${card.ninjutsu}`;
-  PlayerCard[3].innerHTML = `Taijutsu: ${card.taijutsu}`;
-  PlayerCard[4].innerHTML = `Genjutsu: ${card.genjutsu}`;
-  PlayerCard[5].innerHTML = `Inteligência: ${card.intelligence}`;
-}
-
-function changeCardHeroes(card) {
-  const PlayerCard = document.querySelectorAll("#card1 > *");
-  PlayerCard[0].src = card.image;
-  PlayerCard[1].innerHTML = card.name;
-  PlayerCard[2].innerHTML = `Velocidade: ${card.velocity}`;
-  PlayerCard[3].innerHTML = `Especial: ${card.special}`;
-  PlayerCard[4].innerHTML = `Força: ${card.strength}`;
-  PlayerCard[5].innerHTML = `Inteligência: ${card.intelligence}`;
-}
-
-function changeCardFutebol(card) {
-  const PlayerCard = document.querySelectorAll("#card1 > *");
-  PlayerCard[0].src = card.image;
-  PlayerCard[1].innerHTML = card.name;
-  PlayerCard[2].innerHTML = `Ritmo: ${card.pace}`;
-  PlayerCard[3].innerHTML = `Finalização: ${card.shooting}`;
-  PlayerCard[4].innerHTML = `Drible: ${card.dribbling}`;
-  PlayerCard[5].innerHTML = `Fisico: ${card.physical}`;
-}
-
-function cardFirstClick() {
+function firstClick() {
   const element = document.getElementById("card-click");
   const elementCard = document.getElementById("card1");
   element.addEventListener("click", (e) => {
@@ -99,7 +28,7 @@ function cardFirstClick() {
   });
 }
 
-function updateRoud() {
+function updateRound() {
   let roundsDiplay = document.querySelector("#tela-jogo__rodada");
   rounds += 1;
   roundsDiplay.innerHTML = rounds;
@@ -115,7 +44,7 @@ function updateScore() {
 function attributeSelection(e) {
   const element = document.getElementById("card2");
   element.classList.add("card2-hover");
-  setTimeout(cardReturn, 2000);
+  setTimeout(positionReturn, 2000);
   let attributeValue = parseInt(e.target.innerHTML.split(" ")[1]);
   let attributeName = e.target.innerHTML.split(":")[0];
   let attributeValueCPU = attributeCPUCompare(attributeName);
