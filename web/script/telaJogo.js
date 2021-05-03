@@ -2,7 +2,7 @@ const URL_NARUTO = "https://i.ibb.co/2YPMPcw/wp5845402.jpg";
 const URL_HERO = "https://i.ibb.co/c2CsvNN/wallup-net.jpg";
 const CARD_COLOR_HERO = "#1780a1";
 const URL_FUTEBOL =
-  "https://c.wallhere.com/photos/37/e8/Neymar_JR_Neymar_Paris_Saint_Germain_P_S_G_soccer-1389397.jpg!d";
+  "https://i.ibb.co/JFZrNZt/Neymar-JR-Neymar-Paris-Saint-Germain-P-S-G-soccer-1389397.jpg";
 const CARD_COLOR_FUTEBOL = "#7b2cbf";
 const URL_NARUTO_DECK = "http://localhost:3000/narutoCards";
 const URL_HEROES_DECK = "http://localhost:3000/heroesCards";
