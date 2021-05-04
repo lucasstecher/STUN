@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>STUN - Super Trunfo</title>
   </head>
@@ -14,11 +16,11 @@
         <a href="#news">Regras</a>
         <a href="#contact">Multiplayer</a>
         <a href="#about">Loja</a>
-        <a href="#about">Sobre</a>
+        <a data-bs-toggle="modal" data-bs-target="#staticBackdrop">Sobre</a>
         </a>
       </div>
       <div class="container">
-        <div id="logo"><img src="" alt=""> </div>
+        <div id="logo" title="Logo Stun"></div>
         <header class="container__informacao">
           <h1>Super Trunfo</h1>
           <input type="text" placeholder="Nickname" required id="inputNome" />
@@ -26,21 +28,21 @@
         <main class="container__deck">
           <h3>Selecione um deck para iniciar partida</h3>
           <div class="decks">
-            <div class="deck__title">
+            <div class="deck__title" title="Deck de Naruto">
               <h2 class="deck__title">Naruto</h2>
               <div
                 class="primeiro__deck"
                 id="cardNaruto"
               ></div>
             </div>
-            <div class="deck__title">
+            <div class="deck__title" title="Deck Heróis">
               <h2 class="deck__title">Heróis</h2>
               <div
                 class="segundo__deck"
                 id="cardHero"
               ></div>
             </div>
-            <div class="deck__title">
+            <div class="deck__title" title="Deck de Futebol">
               <h2 class="deck__title">Futebol</h2>
               <div
                 class="terceiro__deck"
@@ -54,6 +56,77 @@
         </footer>
       </div>
     </div>
+    
+<!-- Modal -->
+<div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content " >
+      <div class="modal-header border-bottom-0 flex-column">
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         <h2><img  width="230px" height="150px" src="https://i.ibb.co/yQsqVPz/STUN.png" alt="Logo STUN"></h2>
+      </div>
+      <div class="modal-body">
+        <p>STUN - Trata-se de um jogo divertido e empolgante, capaz intrete-lo por horas, este projeto foi criado pela equipe do SQUAD-7 duranta a Hackton da FCamara em maio de 2021.</p>  
+        <h3>Membros do SQUAD-7</h3>
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100 align-items-center bg-success">
+      <img src="https://avatars.githubusercontent.com/u/83254726?v=4" class="card-img-top rounded-circle" alt="Armando Hector">
+      <div class="card-body">
+        <h5 class="card-title">Armando Hector Rodriguez</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 align-items-center bg-success" >
+      <img src="https://avatars.githubusercontent.com/u/67517184?v=4" class="card-img-top rounded-circle" alt="Isac sousa">
+      <div class="card-body">
+        <h5 class="card-title">Isac Sousa</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 align-items-center bg-success">
+      <img src="https://avatars.githubusercontent.com/u/68866459?v=4" class="card-img-top rounded-circle" alt="Lucas Vieira">
+      <div class="card-body">
+        <h5 class="card-title">Lucas Vieira Stecher de Oliveira</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        </div>
+        </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 align-items-center bg-success">
+            <img src="https://avatars.githubusercontent.com/u/82073973?v=4" class="card-img-top rounded-circle" alt="Peterson Cabrini">
+            <div class="card-body">
+              <h5 class="card-title">Peterson Cabrini</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.
+                This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 align-items-center bg-success">
+            <img src="https://avatars.githubusercontent.com/u/42968718?s=400&v=4" class="card-img-top rounded-circle" alt="Emerson Moreira">
+            <div class="card-body">
+              <h5 class="card-title">Emerson Moreira</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.
+                This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+     
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
     <script src="script/interfaceIndex.js"></script>
   </body>
 </html>
