@@ -59,9 +59,11 @@ function attributeSelection(e) {
   if (attributeValue > attributeValueCPU) {
     pontosJogador += 50;
     winMove(deckPlayer, deckCPU);
-  } else {
+  } else if(attributeValue < attributeValueCPU) {
     pontosCpu += 50;
     winMove(deckCPU, deckPlayer);
+  } else {
+    drawMove(deckPlayer, deckCPU);
   }
 
   updateScore();
@@ -107,5 +109,10 @@ function winMove(deckWinner, deckLoser) {
   let playerCard = deckWinner.shift();
   deckWinner.push(playerCard);
   deckWinner.push(deckLoser.shift());
+}
+
+function drawMove(deckPlayer, deckCPU) {
+    deckPlayer.push(deckPlayer.shift());
+    deckCPU.push(deckCPU.shift());
 }
 
