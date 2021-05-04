@@ -3,6 +3,7 @@ let pontosCpu = 0;
 let rounds = 1;
 let deckPlayer = [];
 let deckCPU = [];
+const POINT_WIN = 50;
 
 document.addEventListener("DOMContentLoaded", async () => {
   await deckDivision();
@@ -35,7 +36,7 @@ function firstClick() {
 
 function updateRound() {
   let roundsDiplay = document.querySelector("#tela-jogo__rodada");
-  rounds += 1;
+  rounds++;
   roundsDiplay.innerHTML = rounds;
   changeCardPlayer(deckPlayer[0]);
   changeCardCPU(deckCPU[0]);
@@ -57,23 +58,27 @@ function attributeSelection(e) {
   let attributeValueCPU = attributeCPUCompare(attributeName);
 
   if (attributeValue > attributeValueCPU) {
-    pontosJogador += 50;
+    pontosJogador += POINT_WIN;
     winMove(deckPlayer, deckCPU);
-  } else if(attributeValue < attributeValueCPU) {
-    pontosCpu += 50;
+  
+  } 
+  else if(attributeValue < attributeValueCPU) {
+    pontosCpu += POINT_WIN;
+    CPUTurn();
     winMove(deckCPU, deckPlayer);
     attributeCPUSelection();
+  
   } else {
     drawMove(deckPlayer, deckCPU);
   }
 
-  updateScore();
 }
 
 async function attributeCPUSelection() {
-  updateScore();
   let CPUdata = attributeSelectionByCPU();
+  console.log(CPUdata);
   let playerValue = attributePlayerCompare(CPUdata.name);
+  console.log(playerValue);
   // movimento das cartas
     const elementCard = document.getElementById("card1");
     elementCard.classList.add("card1-hover");
@@ -81,18 +86,17 @@ async function attributeCPUSelection() {
     const element = document.getElementById("card2");
     element.classList.add("card2-hover");
 
-
-
   // retorno das cartas
-  setTimeout(positionReturn, 2000);
+  setTimeout(positionReturn, 1000);
   
   setTimeout(() => {
     if(CPUdata.value > playerValue) {
-      pontosCpu += 50;
+      pontosCpu += POINT_WIN;
       winMove(deckCPU, deckPlayer);
       attributeCPUSelection();
     } else if(CPUdata.value < playerValue) {
-      pontosJogador += 50;
+      playerTurn()
+      pontosJogador += POINT_WIN;
       winMove(deckPlayer, deckCPU);
     } else {
       drawMove(deckPlayer, deckCPU);
@@ -100,9 +104,17 @@ async function attributeCPUSelection() {
     }
   }, 4000); 
   
-  updateScore();
 }
 
+function playerTurn() {
+  let element = document.getElementById("mensagem-player");
+  element.innerHTML = "Clique na carta e escolha o atributo";
+}
+
+function CPUTurn() {
+  let element = document.getElementById("mensagem-player");
+  element.innerHTML = "Aguarde o turno do oponente";
+}
 
 
 function attributeCPUCompare(attributeName) {
@@ -116,6 +128,7 @@ function attributeCPUCompare(attributeName) {
     }
   });
 
+  console.log(valueAttribute);
   return valueAttribute;
 }
 
@@ -166,10 +179,30 @@ function winMove(deckWinner, deckLoser) {
   let playerCard = deckWinner.shift();
   deckWinner.push(playerCard);
   deckWinner.push(deckLoser.shift());
+  gameOver();
+  updateScore();
 }
 
 function drawMove(deckPlayer, deckCPU) {
     deckPlayer.push(deckPlayer.shift());
     deckCPU.push(deckCPU.shift());
+    updateScore();
+}
+
+function gameOver() {
+  if(deckCPU.length == 0){
+    pontosJogador *= 2;
+    scoreDocument();
+  } else if(deckPlayer.length == 0){
+    pontosJogador /= 2;
+    scoreDocument();
+  }
+}
+
+function scoreDocument() {
+  const urlParams = new URLSearchParams(location.search);
+  const nickname = urlParams.get("nickname");
+  let score = pontosJogador;
+  window.location = `http://127.0.0.1:5501/web/components/telaPlacar.html?nickname=${nickname}&points=${score}`;
 }
 
