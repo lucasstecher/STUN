@@ -30,19 +30,35 @@ async function getCards() {
     let deck = queryString();
     switch (deck) {
       case "cardNaruto":
-        changeCardNaruto(card);
+        changeCardNaruto(card, "card1");
         break;
       case "cardHero":
-        changeCardHeroes(card);
+        changeCardHeroes(card, "card1");
         break;
       case "cardFutebol":
-        changeCardFutebol(card);
+        changeCardFutebol(card, "card1");
         break;
     }
   }
 
-  function changeCardNaruto(card) {
-    const PlayerCard = document.querySelectorAll("#card1 > *");
+  function changeCardCPU(card) {
+    let deck = queryString();
+    switch (deck) {
+      case "cardNaruto":
+        changeCardNaruto(card, "card2");
+        break;
+      case "cardHero":
+        changeCardHeroes(card, "card2");
+        break;
+      case "cardFutebol":
+        changeCardFutebol(card, "card2");
+        break;
+    }
+  }
+
+
+  function changeCardNaruto(card, cardChange) {
+    const PlayerCard = document.querySelectorAll(`#${cardChange} > *`);
     PlayerCard[0].src = card.image;
     PlayerCard[1].innerHTML = card.name;
     PlayerCard[2].innerHTML = `Ninjutsu: ${card.ninjutsu}`;
@@ -51,8 +67,8 @@ async function getCards() {
     PlayerCard[5].innerHTML = `Inteligência: ${card.intelligence}`;
   }
   
-  function changeCardHeroes(card) {
-    const PlayerCard = document.querySelectorAll("#card1 > *");
+  function changeCardHeroes(card, cardChange) {
+    const PlayerCard = document.querySelectorAll(`#${cardChange} > *`);
     PlayerCard[0].src = card.image;
     PlayerCard[1].innerHTML = card.name;
     PlayerCard[2].innerHTML = `Velocidade: ${card.velocity}`;
@@ -61,8 +77,8 @@ async function getCards() {
     PlayerCard[5].innerHTML = `Inteligência: ${card.intelligence}`;
   }
   
-  function changeCardFutebol(card) {
-    const PlayerCard = document.querySelectorAll("#card1 > *");
+  function changeCardFutebol(card, cardChange) {
+    const PlayerCard = document.querySelectorAll(`#${cardChange} > *`);
     PlayerCard[0].src = card.image;
     PlayerCard[1].innerHTML = card.name;
     PlayerCard[2].innerHTML = `Ritmo: ${card.pace}`;

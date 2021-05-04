@@ -6,6 +6,8 @@ let deckCPU = [];
 
 document.addEventListener("DOMContentLoaded", async () => {
   await deckDivision();
+  changeCardPlayer(deckPlayer[0]);
+  changeCardCPU(deckCPU[0]);
   firstClick();
 });
 
@@ -36,6 +38,7 @@ function updateRound() {
   rounds += 1;
   roundsDiplay.innerHTML = rounds;
   changeCardPlayer(deckPlayer[0]);
+  changeCardCPU(deckCPU[0]);
 }
 
 function updateScore() {
