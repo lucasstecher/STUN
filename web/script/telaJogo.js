@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   firstClick();
 });
 
-
 function positionReturn() {
   const cardPlayer = document.getElementById("card1");
   const cardCPU = document.getElementById("card2");
@@ -137,9 +136,9 @@ function attributePlayerCompare(attributeName) {
   const attributeDivPlayer = document.querySelectorAll(".atr-player-card");
   let valueAttribute;
   let attributeNamePlayer;
-  attributeDivPlayer.forEach(value => {
+  attributeDivPlayer.forEach((value) => {
     attributeNamePlayer = value.innerHTML.split(":")[0];
-    if(attributeName == attributeNamePlayer){
+    if (attributeName == attributeNamePlayer) {
       valueAttribute = parseInt(value.innerHTML.split(" ")[1]);
     }
   });
@@ -161,8 +160,6 @@ function attributeSelectionByCPU() {
   });
   return { name: attributeSelectedName, value: attributeSelected };
 }
-
-
 
 // dividir cartas com o posicionamento aleatorio
 async function deckDivision() {
@@ -205,4 +202,3 @@ function scoreDocument() {
   let score = pontosJogador;
   window.location = `http://127.0.0.1:5501/web/components/telaPlacar.html?nickname=${nickname}&points=${score}`;
 }
-

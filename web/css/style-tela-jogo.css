@@ -50,7 +50,7 @@
   text-shadow: 1px 1px 2px #000, 0 0 1em #000, 0 0 0.2em #000;
   font-weight: 700;
   letter-spacing: 0.2rem;
-  margin-top: 27px;
+  margin: 40px 0 0px 0;
 }
 
 .tela-jogo__title #logo {
@@ -169,18 +169,19 @@ p {
 /*-- Tela Smartphone */
 
 @media screen and (max-width: 767px) {
+  .tela-jogo__container {
+    height: 100%;
+    background: url("https://i.pinimg.com/originals/a6/c9/1c/a6c91c7d41bfc9fafaacde0f0a18145d.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 35%;
+    position: unset;
+  }
+
   .tela-jogo__container-cartas {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    transform: perspective(900px);
-    transform-style: preserve-3d;
-    -webkit-transform: perspective(900px);
-    -webkit-transform-style: preserve-3d;
-  }
-
-  .tela-jogo__title h1 {
-    font-size: 30px;
   }
 
   .tela-jogo__card1 {
@@ -188,6 +189,17 @@ p {
     box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
   }
 
+  .tela-jogo__title h1 {
+    font-size: 30px;
+  }
+
+  .tela-jogo__title span {
+    margin-top: 27px;
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 13px;
+    margin: 50px 0 20px 0;
+  }
   .tela-jogo__card2 {
     opacity: 0.2;
   }
@@ -203,34 +215,13 @@ p {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   }
 
-  .tela-jogo__vs {
+  .tela-jogo__vs h3 {
     display: block;
     height: 0px;
     margin-top: 0px;
-  }
-
-  .tela-jogo__title span {
-    margin-top: 27px;
-    text-align: center;
-    word-wrap: break-word;
-    font-size: 13px;
-  }
-
-  .tela-jogo__container {
-    height: 100%;
-    background: url("https://i.pinimg.com/originals/a6/c9/1c/a6c91c7d41bfc9fafaacde0f0a18145d.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 35%;
-    position: unset;
-  }
-  
-   .tela-jogo__content h3 {
-    margin-top: 80px;
+    margin-bottom: 10px;
   }
 }
-
-/*-- Tela Tablet */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .tela-jogo__container-cartas {
@@ -263,10 +254,11 @@ p {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   }
 
-  .tela-jogo__vs {
+  .tela-jogo__vs h3 {
     display: block;
     height: 0px;
     margin-top: 0px;
+    margin-bottom: 10px;
   }
 
   .tela-jogo__title span {
@@ -274,6 +266,7 @@ p {
     text-align: center;
     word-wrap: break-word;
     font-size: 13px;
+    margin: 50px 0 20px 0;
   }
 
   .tela-jogo__container {
@@ -285,11 +278,6 @@ p {
   /* .nomeCPU {
     margin-top: 100px;
   } */
-
-  .tela-jogo__content h3 {
-    margin-top: 80px;
-  }
-
 }
 
 /*-- Tela Laptop */
