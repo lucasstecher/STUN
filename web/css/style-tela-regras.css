@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:700");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("https://images-ext-2.discordapp.net/external/o5uhmC06qzSblkFuuexUKAUttjh3NS2TIyvKb49bWBE/http/assets.vg247.com/current//2015/05/the_witcher_3_gwent.jpg?width=1202&height=676");
+    background-size: cover;
+    font-size: 1rem;
+    font-family: 'Exo', sans-serif;
+}
+
+h3 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.div-geral{
+    color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 1000px;
+    background-color: #1f867085;
+    border-radius: 25px;
+    border: 2px solid #000;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+
+.sub-div{
+    max-width: 850px;
+}
