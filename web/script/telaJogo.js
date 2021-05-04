@@ -62,6 +62,7 @@ function attributeSelection(e) {
   } else if(attributeValue < attributeValueCPU) {
     pontosCpu += 50;
     winMove(deckCPU, deckPlayer);
+    attributeCPUSelection();
   } else {
     drawMove(deckPlayer, deckCPU);
   }
@@ -69,11 +70,47 @@ function attributeSelection(e) {
   updateScore();
 }
 
+async function attributeCPUSelection() {
+  updateScore();
+  let CPUdata = attributeSelectionByCPU();
+  let playerValue = attributePlayerCompare(CPUdata.name);
+  // movimento das cartas
+    const elementCard = document.getElementById("card1");
+    elementCard.classList.add("card1-hover");
+
+    const element = document.getElementById("card2");
+    element.classList.add("card2-hover");
+
+
+
+  // retorno das cartas
+  setTimeout(positionReturn, 2000);
+  
+  setTimeout(() => {
+    if(CPUdata.value > playerValue) {
+      pontosCpu += 50;
+      winMove(deckCPU, deckPlayer);
+      attributeCPUSelection();
+    } else if(CPUdata.value < playerValue) {
+      pontosJogador += 50;
+      winMove(deckPlayer, deckCPU);
+    } else {
+      drawMove(deckPlayer, deckCPU);
+      attributeCPUSelection();
+    }
+  }, 4000); 
+  
+  updateScore();
+}
+
+
+
 function attributeCPUCompare(attributeName) {
   const attributesDivCPU = document.querySelectorAll(".atr-cpu-card");
   let valueAttribute;
+  let attributeNameCPU;
   attributesDivCPU.forEach((value) => {
-    let attributeNameCPU = value.innerHTML.split(":")[0];
+    attributeNameCPU = value.innerHTML.split(":")[0];
     if (attributeName == attributeNameCPU) {
       valueAttribute = parseInt(value.innerHTML.split(" ")[1]);
     }
@@ -82,17 +119,37 @@ function attributeCPUCompare(attributeName) {
   return valueAttribute;
 }
 
+// comparação carta selecionado pela CPU x player
+function attributePlayerCompare(attributeName) {
+  const attributeDivPlayer = document.querySelectorAll(".atr-player-card");
+  let valueAttribute;
+  let attributeNamePlayer;
+  attributeDivPlayer.forEach(value => {
+    attributeNamePlayer = value.innerHTML.split(":")[0];
+    if(attributeName == attributeNamePlayer){
+      valueAttribute = parseInt(value.innerHTML.split(" ")[1]);
+    }
+  });
+
+  return valueAttribute;
+}
+
+// seleção de carta pela CPU
 function attributeSelectionByCPU() {
   const attributesDivCPU = document.querySelectorAll(".atr-cpu-card");
   let attributeSelected = 0;
+  let attributeSelectedName;
   attributesDivCPU.forEach((value) => {
     let attributeValue = parseInt(value.innerHTML.split(" ")[1]);
     if (attributeValue > attributeSelected) {
       attributeSelected = attributeValue;
+      attributeSelectedName = value.innerHTML.split(":")[0];
     }
   });
-  return attributeSelected;
+  return { name: attributeSelectedName, value: attributeSelected };
 }
+
+
 
 // dividir cartas com o posicionamento aleatorio
 async function deckDivision() {
