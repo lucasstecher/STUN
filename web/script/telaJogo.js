@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   firstClick();
 });
 
-
 function positionReturn() {
   const cardPlayer = document.getElementById("card1");
   const cardCPU = document.getElementById("card2");
@@ -59,7 +58,7 @@ function attributeSelection(e) {
   if (attributeValue > attributeValueCPU) {
     pontosJogador += 50;
     winMove(deckPlayer, deckCPU);
-  } else if(attributeValue < attributeValueCPU) {
+  } else if (attributeValue < attributeValueCPU) {
     pontosCpu += 50;
     winMove(deckCPU, deckPlayer);
     attributeCPUSelection();
@@ -75,35 +74,31 @@ async function attributeCPUSelection() {
   let CPUdata = attributeSelectionByCPU();
   let playerValue = attributePlayerCompare(CPUdata.name);
   // movimento das cartas
-    const elementCard = document.getElementById("card1");
-    elementCard.classList.add("card1-hover");
+  const elementCard = document.getElementById("card1");
+  elementCard.classList.add("card1-hover");
 
-    const element = document.getElementById("card2");
-    element.classList.add("card2-hover");
-
-
+  const element = document.getElementById("card2");
+  element.classList.add("card2-hover");
 
   // retorno das cartas
   setTimeout(positionReturn, 2000);
-  
+
   setTimeout(() => {
-    if(CPUdata.value > playerValue) {
+    if (CPUdata.value > playerValue) {
       pontosCpu += 50;
       winMove(deckCPU, deckPlayer);
       attributeCPUSelection();
-    } else if(CPUdata.value < playerValue) {
+    } else if (CPUdata.value < playerValue) {
       pontosJogador += 50;
       winMove(deckPlayer, deckCPU);
     } else {
       drawMove(deckPlayer, deckCPU);
       attributeCPUSelection();
     }
-  }, 4000); 
-  
+  }, 4000);
+
   updateScore();
 }
-
-
 
 function attributeCPUCompare(attributeName) {
   const attributesDivCPU = document.querySelectorAll(".atr-cpu-card");
@@ -124,9 +119,9 @@ function attributePlayerCompare(attributeName) {
   const attributeDivPlayer = document.querySelectorAll(".atr-player-card");
   let valueAttribute;
   let attributeNamePlayer;
-  attributeDivPlayer.forEach(value => {
+  attributeDivPlayer.forEach((value) => {
     attributeNamePlayer = value.innerHTML.split(":")[0];
-    if(attributeName == attributeNamePlayer){
+    if (attributeName == attributeNamePlayer) {
       valueAttribute = parseInt(value.innerHTML.split(" ")[1]);
     }
   });
@@ -149,8 +144,6 @@ function attributeSelectionByCPU() {
   return { name: attributeSelectedName, value: attributeSelected };
 }
 
-
-
 // dividir cartas com o posicionamento aleatorio
 async function deckDivision() {
   let deck = await getCards();
@@ -169,7 +162,6 @@ function winMove(deckWinner, deckLoser) {
 }
 
 function drawMove(deckPlayer, deckCPU) {
-    deckPlayer.push(deckPlayer.shift());
-    deckCPU.push(deckCPU.shift());
+  deckPlayer.push(deckPlayer.shift());
+  deckCPU.push(deckCPU.shift());
 }
-
