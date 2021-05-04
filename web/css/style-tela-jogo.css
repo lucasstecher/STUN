@@ -224,6 +224,10 @@ p {
     background-position: 35%;
     position: unset;
   }
+  
+   .tela-jogo__content h3 {
+    margin-top: 80px;
+  }
 }
 
 /*-- Tela Tablet */
@@ -278,6 +282,14 @@ p {
     background-size: cover;
     position: unset;
   }
+  /* .nomeCPU {
+    margin-top: 100px;
+  } */
+
+  .tela-jogo__content h3 {
+    margin-top: 80px;
+  }
+
 }
 
 /*-- Tela Laptop */
@@ -329,6 +341,10 @@ p {
     background-image: url("https://i.pinimg.com/originals/f5/4b/0d/f54b0d9d056f432251c9b7ba80164db6.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .tela-jogo__container-cartas {
+    margin-top: 50px;
   }
 }
 
