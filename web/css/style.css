@@ -25,7 +25,6 @@ body {
   background-color: #333;
   overflow: hidden;
   height: 40px;
-  
 }
 
 /* Style the links inside the navigation bar */
@@ -42,7 +41,6 @@ body {
 .topnav a:hover {
   background-color: #1f867085;
 }
-
 
 .container {
   display: flex;
@@ -401,4 +399,21 @@ body {
   body {
     background: url("https://i.ibb.co/tD75xLh/Sin-t-tulo-2.jpg");
   }
+}
+
+.modal-content {
+  background-color: #1f867085;
+}
+
+.btn-close {
+  color: #fff;
+}
+
+.content-list li {
+  list-style: none;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
 }
