@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Exo:700");
+@import url("https://fonts.googleapis.com/css?family=Abel");
 :root {
   --bg-color: #aad8d3;
   --text-color: #fff;
@@ -50,6 +51,16 @@ body {
   .topnav a:not(:first-child) {
     display: none;
   }
+
+  .topnav {
+    position: absolute;
+    z-index: 9999;
+    width: 100vw;
+  }
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
   .topnav a.icon {
     float: right;
     display: block;
@@ -57,9 +68,6 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {
-    position: relative;
-  }
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
@@ -167,6 +175,7 @@ body {
     background: url("https://i.ibb.co/yQsqVPz/STUN.png") no-repeat;
     background-size: contain;
     margin-bottom: -70px;
+    /* margin-top: 65px; */
     z-index: 999;
   }
 
@@ -343,7 +352,7 @@ body {
     background: url("https://i.ibb.co/yQsqVPz/STUN.png") no-repeat;
     background-size: contain;
     margin-bottom: -80px;
-    margin-top: 20px;
+    margin-top: 50px;
     z-index: 999;
   }
 
@@ -435,10 +444,6 @@ body {
   background-color: #1f867085;
 }
 
-.btn-close {
-  color: #fff;
-}
-
 .content-list li {
   list-style: none;
 }
@@ -484,4 +489,17 @@ body {
 
 .modal-body h3 {
   margin-left: 10px;
+  font-family: "Exo", sans-serif;
+  font-size: 1.3rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-body p {
+  font-size: 1.2rem;
+  font-family: "Abel", sans-serif;
 }
