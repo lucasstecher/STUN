@@ -283,42 +283,38 @@ p {
 /*-- Tela Laptop */
 
 @media screen and (min-width: 1336px) and (max-width: 1440px) {
-  .tela-jogo__card1 {
-    width: 170px;
-    height: 250px;
+  .tela-jogo__card1,
+  .tela-jogo__card2 {
+    width: 150px;
+    height: 230px;
   }
 
   .tela-jogo__card1 div {
-    margin-left: 5px;
-    padding-left: 9px;
+    margin-left: 1px;
+    padding-left: 6px;
 
-    width: 130px;
+    width: 126px;
   }
 
   .tela-jogo__card1 img {
-    width: 100px;
-    height: 80px;
+    width: 80px;
+    height: 65px;
   }
 
   .tela-jogo__card1 h3 {
     font-size: 17px;
   }
 
-  .tela-jogo__card2 {
-    width: 170px;
-    height: 250px;
-  }
-
   .tela-jogo__card2 div {
-    margin-left: 5px;
-    padding-left: 9px;
+    margin-left: 1px;
+    padding-left: 6px;
 
-    width: 130px;
+    width: 126px;
   }
 
   .tela-jogo__card2 img {
-    width: 100px;
-    height: 80px;
+    width: 80px;
+    height: 65px;
   }
 
   .tela-jogo__card2 h3 {

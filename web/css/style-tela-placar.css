@@ -40,6 +40,13 @@ h1{
     justify-content: center;
 }
 
+#symbol {
+    background-image: url("https://i.ibb.co/HV2s5wg/202116.png");
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+}
+
 .scoreboard{
     color: #EEEEEE;
 }
