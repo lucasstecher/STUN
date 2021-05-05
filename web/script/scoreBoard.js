@@ -2,7 +2,9 @@ const URL = "http://localhost:3000/players";
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    getScore();
     showScore(URL);
+    
 });
 
 async function showScore(url) {
@@ -16,5 +18,28 @@ async function showScore(url) {
     }
 }
 
+function getScore() {
+    const urlParams = new URLSearchParams(location.search);
+    let ScoreLastPlay = urlParams.get("score") || 0;
+    let elementScore = document.querySelector('.score');
+    elementScore.innerHTML = `Score: ${ScoreLastPlay}`;
+}
+
+async function savePlayerStatus(url) {
+    const urlParams = new URLSearchParams(location.search);
+    let ScoreLastPlay = urlParams.get("score");
+    let nickname = urlParams.get("nickname");
+
+    const settings = {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        }
+    }
+
+    const fetchResponse = await fetch(url, settings);
+
+}
 
 

@@ -200,5 +200,5 @@ function scoreDocument() {
   const urlParams = new URLSearchParams(location.search);
   const nickname = urlParams.get("nickname");
   let score = pontosJogador;
-  window.location = `http://127.0.0.1:5501/web/components/telaPlacar.html?nickname=${nickname}&points=${score}`;
+  window.location = `http://127.0.0.1:5501/web/components/telaPlacar.html?nickname=${nickname}&score=${score}`;
 }
