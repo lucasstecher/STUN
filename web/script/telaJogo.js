@@ -59,50 +59,45 @@ function attributeSelection(e) {
   if (attributeValue > attributeValueCPU) {
     pontosJogador += POINT_WIN;
     winMove(deckPlayer, deckCPU);
-  
-  } 
-  else if(attributeValue < attributeValueCPU) {
+  } else if (attributeValue < attributeValueCPU) {
     pontosCpu += POINT_WIN;
     CPUTurn();
     winMove(deckCPU, deckPlayer);
     attributeCPUSelection();
-  
   } else {
     drawMove(deckPlayer, deckCPU);
   }
-
 }
 
 async function attributeCPUSelection() {
   let CPUdata = attributeSelectionByCPU();
-  console.log(CPUdata);
-  let playerValue = attributePlayerCompare(CPUdata.name);
-  console.log(playerValue);
-  // movimento das cartas
-    const elementCard = document.getElementById("card1");
-    elementCard.classList.add("card1-hover");
 
-    const element = document.getElementById("card2");
-    element.classList.add("card2-hover");
+  let playerValue = attributePlayerCompare(CPUdata.name);
+
+  // movimento das cartas
+  const elementCard = document.getElementById("card1");
+  elementCard.classList.add("card1-hover");
+
+  const element = document.getElementById("card2");
+  element.classList.add("card2-hover");
 
   // retorno das cartas
   setTimeout(positionReturn, 1000);
-  
+
   setTimeout(() => {
-    if(CPUdata.value > playerValue) {
+    if (CPUdata.value > playerValue) {
       pontosCpu += POINT_WIN;
       winMove(deckCPU, deckPlayer);
       attributeCPUSelection();
-    } else if(CPUdata.value < playerValue) {
-      playerTurn()
+    } else if (CPUdata.value < playerValue) {
+      playerTurn();
       pontosJogador += POINT_WIN;
       winMove(deckPlayer, deckCPU);
     } else {
       drawMove(deckPlayer, deckCPU);
       attributeCPUSelection();
     }
-  }, 4000); 
-  
+  }, 4000);
 }
 
 function playerTurn() {
@@ -115,7 +110,6 @@ function CPUTurn() {
   element.innerHTML = "Aguarde o turno do oponente";
 }
 
-
 function attributeCPUCompare(attributeName) {
   const attributesDivCPU = document.querySelectorAll(".atr-cpu-card");
   let valueAttribute;
@@ -127,7 +121,6 @@ function attributeCPUCompare(attributeName) {
     }
   });
 
-  console.log(valueAttribute);
   return valueAttribute;
 }
 
@@ -181,16 +174,16 @@ function winMove(deckWinner, deckLoser) {
 }
 
 function drawMove(deckPlayer, deckCPU) {
-    deckPlayer.push(deckPlayer.shift());
-    deckCPU.push(deckCPU.shift());
-    updateScore();
+  deckPlayer.push(deckPlayer.shift());
+  deckCPU.push(deckCPU.shift());
+  updateScore();
 }
 
 function gameOver() {
-  if(deckCPU.length == 0){
+  if (deckCPU.length == 0) {
     pontosJogador *= 2;
     scoreDocument();
-  } else if(deckPlayer.length == 0){
+  } else if (deckPlayer.length == 0) {
     pontosJogador /= 2;
     scoreDocument();
   }
