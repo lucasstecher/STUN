@@ -1,10 +1,8 @@
-const URL = "http://localhost:3000/players";
-
+const URL_GET_CARDS = "http://localhost:3000/players";
 
 document.addEventListener("DOMContentLoaded", () => {
-    savePlayerStatus(URL);
     getScore();
-    showScore(URL);
+    showScore(URL_GET_CARDS);
     
 });
 
@@ -26,22 +24,6 @@ function getScore() {
     elementScore.innerHTML = `Score: ${ScoreLastPlay}`;
 }
 
-async function savePlayerStatus(url) {
-    const urlParams = new URLSearchParams(location.search);
-    let ScoreLastPlay = urlParams.get("score");
-    let nickname = urlParams.get("nickname");
-    let data = {nickname: nickname, score: ScoreLastPlay};
 
-    const settings = {
-        method: 'POST',
-        headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data)
-    };
-
-    const fetchResponse = await fetch(url, settings);
-}
 
 
