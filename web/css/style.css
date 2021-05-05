@@ -46,6 +46,11 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  .topnav{
+    position: absolute;
+    z-index: 9999;
+    width: 100vw;
+  }
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -54,7 +59,11 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {position: absolute;
+  width: 100vw;
+  z-index: 9999;
+  }
+
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
@@ -162,6 +171,7 @@ body {
     background: url("https://i.ibb.co/yQsqVPz/STUN.png") no-repeat;
     background-size: contain;
     margin-bottom: -70px;
+    /* margin-top: 65px; */
     z-index: 999;
   }
 
@@ -338,7 +348,7 @@ body {
     background: url("https://i.ibb.co/yQsqVPz/STUN.png") no-repeat;
     background-size: contain;
     margin-bottom: -80px;
-    margin-top: 20px;
+    margin-top: 50px;
     z-index: 999;
   }
 
