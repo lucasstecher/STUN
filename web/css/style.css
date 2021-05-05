@@ -417,3 +417,41 @@ body {
   width: 100px;
   height: 100px;
 }
+
+.modal-footer {
+  justify-content: space-between;
+}
+
+.item-catao-modal li {
+  list-style-type: none;
+}
+
+.midia-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.midia-social a {
+  margin-left: 10px;
+}
+
+.fa-github {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.fa-linkedin-in {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.modal-body p {
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
+
+.modal-body h3 {
+  margin-left: 10px;
+}
