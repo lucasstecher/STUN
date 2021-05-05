@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,45 +17,58 @@
   <title>STUN - Super Trunfo</title>
 </head>
 
-<body>
-  <div class="overlay">
-    <div class="topnav" id="myTopnav">
-      <a href="../web/index.html">Inicio</a>
-      <a href="../web/components/telaRegras.html">Regras</a>
-      <a href="../web/components/telaMultiplayer.html">Multiplayer</a>
-      <a href="#about">Loja</a>
-      <a href="../web/components/telaPlacar.html">Placar</a>
-      <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Sobre</a>
-      </a>
+  <body>
+    <div class="overlay">
+      <div class="topnav" id="myTopnav">
+        <a href="../web/index.html">Inicio</a>
+        <a href="../web/components/telaRegras.html">Regras</a>
+        <a href="../web/components/telaMultiplayer.html">Multiplayer</a>
+        <a href="#about">Loja</a>
+        <a href="../web/components/telaPlacar.html">Placar</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Sobre</a>
+        </a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="container">
+        <div id="logo" title="Logo Stun"></div>
+        <header class="container__informacao">
+          <h1>Super Trunfo</h1>
+          <input type="text" placeholder="Nickname" required id="inputNome" />
+        </header>
+        <main class="container__deck">
+          <h3>Selecione um deck para iniciar partida</h3>
+          <div class="decks">
+            <div class="deck__title" title="Deck de Naruto">
+              <h2 class="deck__title">Naruto</h2>
+              <div
+                class="primeiro__deck"
+                id="cardNaruto"
+              ></div>
+            </div>
+            <div class="deck__title" title="Deck Heróis">
+              <h2 class="deck__title">Heróis</h2>
+              <div
+                class="segundo__deck"
+                id="cardHero"
+              ></div>
+            </div>
+            <div class="deck__title" title="Deck de Futebol">
+              <h2 class="deck__title">Futebol</h2>
+              <div
+                class="terceiro__deck"
+                id="cardFutebol"
+              ></div>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <p>Criado com muito amor pelo Squad-7</p>
+        </footer>
+      </div>
     </div>
-    <div class="container">
-      <div id="logo" title="Logo Stun"></div>
-      <header class="container__informacao">
-        <h1>Super Trunfo</h1>
-        <input type="text" placeholder="Nickname" required id="inputNome" />
-      </header>
-      <main class="container__deck">
-        <h3>Selecione um deck para iniciar partida</h3>
-        <div class="decks">
-          <div class="deck__title" title="Deck de Naruto">
-            <h2 class="deck__title">Naruto</h2>
-            <div class="primeiro__deck" id="cardNaruto"></div>
-          </div>
-          <div class="deck__title" title="Deck Heróis">
-            <h2 class="deck__title">Heróis</h2>
-            <div class="segundo__deck" id="cardHero"></div>
-          </div>
-          <div class="deck__title" title="Deck de Futebol">
-            <h2 class="deck__title">Futebol</h2>
-            <div class="terceiro__deck" id="cardFutebol"></div>
-          </div>
-        </div>
-      </main>
-      <footer>
-        <p>Criado com muito amor pelo Squad-7</p>
-      </footer>
-    </div>
-  </div>
+
 
   <!-- Modal -->
   <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
