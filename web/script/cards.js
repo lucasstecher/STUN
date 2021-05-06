@@ -11,6 +11,7 @@ async function useGet(url) {
 
 async function getCards() {
     let deck = queryString();
+    let cards;
     switch (deck) {
       case "cardNaruto":
         cards = await useGet(URL_NARUTO_DECK);
