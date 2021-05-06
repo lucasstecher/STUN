@@ -289,7 +289,6 @@ p {
 /*-- Tela Laptop */
 
 @media screen and (min-width: 1336px) and (max-width: 1440px) {
-
   .tela-jogo__card1,
   .tela-jogo__card2 {
     width: 150px;
@@ -339,7 +338,7 @@ p {
   }
 }
 
-.tela-jogo__content>h3 {
+.tela-jogo__content > h3 {
   text-align: center;
   text-transform: uppercase;
   color: var(--text-primary);
@@ -372,4 +371,9 @@ p {
   font-family: "Exo", sans-serif;
 
   text-shadow: 1px 1px 2px #000, 0 0 1em #000, 0 0 0.2em #000;
+}
+
+.divisao-pontos {
+  margin: 0 7px 0 7px;
+  color: #ffe600 !important;
 }
