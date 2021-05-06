@@ -39,7 +39,7 @@ ___
 ## :pencil: Web
 
 Esta pasta é onde se encontra o front-end da aplicação: Os arquivos HTML - CSS - JS.
-### Pastas do projeot
+### Pastas do projeto
 ```
 web
  ┣ 📂.vscode
@@ -67,7 +67,7 @@ web
  ```
 ## :factory: Server
 Esta pasta é onde se encontra o back-end da aplicação.
-### Pastas do projeot
+### Pastas do projeto
 ```
 📦server
  ┣ 📂src
