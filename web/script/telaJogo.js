@@ -52,6 +52,10 @@ function attributeSelection(e) {
   } else if(attributeValue < attributeValueCPU) {
     CpuScore += POINT_WIN;
     CPUTurn();
+    winMove(deckCPU, deckPlayer);
+    attributeCPUSelection();
+  } else {
+    drawMove(deckPlayer, deckCPU);
   }
 }
 
