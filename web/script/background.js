@@ -23,7 +23,7 @@ function AttributeColor(){
   let deck = queryString();
     // definir cor dos atributos
     let cardAttributesPlayer = document.querySelectorAll(".atr-player-card");
-    let cardAttributesCPU = document.querySelectorAll(".atr-player-card");
+    let cardAttributesCPU = document.querySelectorAll(".atr-cpu-card");
     if(deck === "cardNaruto"){
       for(let i = 0; i < cardAttributesPlayer.length; i++){
         cardAttributesPlayer[i].style.color = ATTRIBUTE_FONT_COLOR_NARUTO;
@@ -49,13 +49,11 @@ function AttributeColor(){
 }
 
 
-
 // função para gerar o background baseado no deck selecionado.
 function backgroundSelector() {
   let deck = queryString();
   let background = document.querySelector(".tela-jogo__container");
   let backgroundCard = document.getElementsByClassName("tela-jogo__cards");
-
 
   if (deck === "cardNaruto") {
     background.style.backgroundImage = `url(${URL_NARUTO})`;
@@ -75,4 +73,5 @@ function backgroundSelector() {
   }
 }
 
+AttributeColor();
 backgroundSelector();
