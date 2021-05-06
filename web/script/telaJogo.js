@@ -85,10 +85,18 @@ function updateRound() {
 
 // atualiza pontuação em tela
 function updateScore() {
+  // atualiza pontuação
   let placarPlayer = document.getElementById("jogador-placar");
   let placarCpu = document.getElementById("cpu-placar");
   placarPlayer.innerHTML = playerScore;
   placarCpu.innerHTML = CpuScore;
+
+  //atualiza quantida de cartas
+  let cardsCountPlayer = document.getElementById("qtd-cartas-player");
+  let cardsCountCPU = document.getElementById("qtd-cartas-cpu");
+  cardsCountPlayer.innerHTML = deckPlayer.length;
+  cardsCountCPU.innerHTML = deckCPU.length;
+
 }
 
 // controla jogada da CPU

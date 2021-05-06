@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+#qtd-cartas {
+  display: inline-block;
+}
+
 .tela-jogo__container {
   padding: 28px;
   width: 100%;
@@ -200,6 +204,7 @@ p {
     font-size: 13px;
     margin: 50px 0 20px 0;
   }
+
   .tela-jogo__card2 {
     opacity: 0.2;
   }
@@ -275,6 +280,7 @@ p {
     background-size: cover;
     position: unset;
   }
+
   /* .nomeCPU {
     margin-top: 100px;
   } */
@@ -283,6 +289,7 @@ p {
 /*-- Tela Laptop */
 
 @media screen and (min-width: 1336px) and (max-width: 1440px) {
+
   .tela-jogo__card1,
   .tela-jogo__card2 {
     width: 150px;
@@ -332,7 +339,7 @@ p {
   }
 }
 
-.tela-jogo__content > h3 {
+.tela-jogo__content>h3 {
   text-align: center;
   text-transform: uppercase;
   color: var(--text-primary);
