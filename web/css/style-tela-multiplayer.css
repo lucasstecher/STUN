@@ -222,6 +222,7 @@
     .container__modes {
       width: 65%;
       border: 2px solid black;
+      margin-bottom: 50px;
     }
   
     .container__modes h3 {
@@ -314,6 +315,7 @@
     .container__modes {
       width: 55%;
       border: 2px solid black;
+      margin-bottom: 25px;
     }
   
     .gameMode {
@@ -434,7 +436,6 @@
       text-align: center;
       padding: 55px;
     }
-
   }
   
   
