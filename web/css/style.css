@@ -503,4 +503,5 @@ body {
 .card-body p {
   font-size: 1.2rem;
   font-family: "Abel", sans-serif;
+  text-align: justify;
 }
