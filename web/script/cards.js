@@ -1,4 +1,4 @@
-const URL_NARUTO_DECK = "http://localhost:3000/narutoCards";
+const URL_NARUTO_DECK = "https://app-stun.herokuapp.com/narutoCards";
 const URL_HEROES_DECK = "http://localhost:3000/heroesCards";
 const URL_FUTEBOL_DECK = "http://localhost:3000/futebolCards";
 

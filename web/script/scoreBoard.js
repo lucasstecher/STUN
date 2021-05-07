@@ -1,4 +1,4 @@
-const URL_GET_CARDS = "http://localhost:3000/players";
+const URL_GET_CARDS = "https://app-stun.herokuapp.com/players";
 
 document.addEventListener("DOMContentLoaded", () => {
     getScore();

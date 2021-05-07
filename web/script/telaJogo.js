@@ -4,7 +4,7 @@ let rounds = 1;
 let deckPlayer = [];
 let deckCPU = [];
 const POINT_WIN = 50;
-const URL = "http://localhost:3000/players";
+const URL = "https://app-stun.herokuapp.com/players";
 
 document.addEventListener("DOMContentLoaded", async () => {
   
