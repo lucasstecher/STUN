@@ -7,10 +7,15 @@ const POINT_WIN = 50;
 const URL = "https://app-stun.herokuapp.com/players";
 
 document.addEventListener("DOMContentLoaded", async () => {
-  
-  await deckDivision();
-  changeCardPlayer(deckPlayer[0]);
-  changeCardCPU(deckCPU[0]);
+  try {
+    await deckDivision();
+    changeCardPlayer(deckPlayer[0]);
+    changeCardCPU(deckCPU[0]);
+  } catch (error) {
+    alert("Error: Os deck não foram identificados!!")
+    console.error({error_name: error.name, error_message: error.message});
+  }
+
   firstClick();
 
 
