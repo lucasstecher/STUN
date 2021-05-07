@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:700");
+
 /*navigation bar*/
 * {
   margin: 0;
@@ -29,7 +31,7 @@ body {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #5c2c877d;
+  background-color: #1f867085;
 }
 
 .topnav .icon {
