@@ -1,0 +1,231 @@
+body {
+    font-family: 'Exo', sans-serif;
+      background-image: url("https://i.ibb.co/yNL9KCW/dasha-henrih.jpg"); 
+      height:100%;
+    margin: 4rem 0;
+  }
+  .logo {
+      width: 400px;
+      height: 250px;
+      background: url("https://i.ibb.co/yQsqVPz/STUN.png") no-repeat;
+      background-size: contain; 
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -20px;
+    } 
+  .Loja{
+      color: #EEEEEE;
+      margin-top: -24px;
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+      font-weight: normal;
+      text-shadow: 1px 1px 2px black;
+      /*border: 2px solid rgb(157, 197, 13);*/
+      margin-left: 122px;
+      
+  }
+  h4 {
+    margin-bottom:2rem;
+    margin-top: 3rem;
+  }
+  
+  .panel {
+    border-radius: 0.3rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 18px;
+  }
+  
+  .container {
+      display: flex;
+      flex-direction: column;
+      /*align-items: center;*/
+      /*justify-content: space-around;*/
+      /*max-width: 70%;*/
+      /* height: 850px; */
+      background-color: #1f867085;
+      border-radius: 25px;
+      position: relative;
+      border: 2px solid #000;
+      margin-top: 50px;
+  }
+  .titulo{
+    width: 100%;
+    
+  }
+  .formulaUno {
+      width: 170px;
+      height: 250px;
+      background: url("https://i.ibb.co/SnrKL3n/racefansdotnet-20190221-173420-10.jpg");
+      background-size: cover;
+      text-align: center;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 2px solid #000;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+   
+  }
+  
+  .boruto {
+      width: 170px;
+      height: 250px;
+      background: url("https://i.ibb.co/5sKzZhs/wallpapersden-com-cool-boruto-uzumaki-art-2048x2048.jpg");
+      background-size: cover;
+      text-align: center;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 2px solid #000;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      
+    }
+  
+  .hero {
+      width: 170px;
+      height: 250px;
+      background: url("https://i.ibb.co/zbzNgwt/deadpool-marvel-anti-hero-uhdpaper-com-hd-6-2033.jpg");
+      background-size: cover;
+      text-align: center;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 2px solid #000;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+  .name{
+    color: gold;
+    margin-top: -7%;
+    background-color: black;
+    width: 100%;
+    border-radius: 10px;
+    padding: 3px;
+    border: 2px solid gold;
+  } 
+  
+  .price{
+    color: gold;
+    margin-top: 125%;
+    background-color:black;
+    width: 100%;
+    border-radius: 10px;
+    padding: 2px;
+    border: 2px solid gold;
+  }
+  
+  
+  
+  /*navigation bar*/
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  /*Cor da barra*/
+  .topnav {
+      background-color: #333;
+      overflow: hidden;
+      height: 40px;
+      
+    }
+    
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      background-color: #1f867085;
+    }
+  
+  .overlay{
+      position: none;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(63, 26, 26, 0.3);
+  }
+  
+  /* vh é o que o usuário enxerga na tela */
+  .mainScreen{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .price:hover{
+    background-color: gray;
+  
+  }
+  
+  .boruto:hover, .formulaUno:hover, .hero:hover{
+    width: 280px;
+    height: 400px;
+    
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .logo {
+      width: 250px;
+      height: 170px;
+      background: url("https://i.ibb.co/yQsqVPz/STUN.png") no-repeat;
+      background-size: contain;
+      
+      margin-top: -20px;
+      z-index: 999;
+    }
+    
+  }
+  
+  
+  @media screen and (min-width: 1024px) {
+    
+      .logo {
+        width: 400px;
+        height: 250px;
+        background: url("https://i.ibb.co/yQsqVPz/STUN.png") no-repeat;
+        background-size: contain;
+        
+        z-index: 999;
+        margin-top: -20px;
+      }
+      .container{
+        height: 780px; 
+      }
+      
+  }
+  
+  @media screen and (max-width: 1366px) {
+          .logo {
+            width: 250px;
+            height: 170px;
+            background: url("https://i.ibb.co/yQsqVPz/STUN.png") no-repeat;
+            background-size: contain;
+            
+            z-index: 999;
+            margin-top: -20px;
+          }
+          }
+  @media screen and (min-width:1024px) {
+            .overlay{
+                position: fixed;
+              }
+              
+            }
+  
