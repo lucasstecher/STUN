@@ -1,135 +1,141 @@
 @import url("https://fonts.googleapis.com/css?family=Exo:700");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-image: url("https://images-ext-2.discordapp.net/external/o5uhmC06qzSblkFuuexUKAUttjh3NS2TIyvKb49bWBE/http/assets.vg247.com/current//2015/05/the_witcher_3_gwent.jpg?width=1202&height=676");
-    background-size: cover;
-    background-repeat: no-repeat;
-  
-    font-size: 1rem;
-    font-family: 'Exo', sans-serif;
+body {
+  background-image: url("https://images-ext-2.discordapp.net/external/o5uhmC06qzSblkFuuexUKAUttjh3NS2TIyvKb49bWBE/http/assets.vg247.com/current//2015/05/the_witcher_3_gwent.jpg?width=1202&height=676");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  font-size: 1rem;
+  font-family: "Exo", sans-serif;
 }
 
 h3 {
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
-.main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*Cor da barra*/
 .topnav {
-    background-color: #333;
-    overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 12px 16px;
-    text-decoration: none;
-    font-size: 15px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #1f867085;
-  }
-  
-  .topnav .icon {
-    display: none;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .topnav{
-      position: absolute;
-      z-index: 9999;
-      width: 100vw;
-    }
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    .topnav.responsive {position: absolute;
-    width: 100vw;
-    z-index: 9999;
-    }
-  
-    .topnav.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-  }
-
-.div-geral{
-    margin: 4rem auto 4rem auto ;
-    color: #EEEEEE;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 1000px;
-    background-color: #1f867085;
-    border-radius: 25px;
-    border: 2px solid #000;
-    padding: 20px;
+  background-color: #333;
+  overflow: hidden;
 }
 
-.sub-div{
-    max-width: 850px;
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #1f867085;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav {
+    position: absolute;
+    z-index: 9999;
+    width: 100vw;
+  }
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: absolute;
+    width: 100vw;
+    z-index: 9999;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.div-geral {
+  margin: 4rem auto 4rem auto;
+  color: #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 1000px;
+  background-color: #1f867085;
+  border-radius: 25px;
+  border: 2px solid #000;
+  padding: 20px;
+}
+
+.sub-div {
+  max-width: 850px;
 }
 
 @media screen and (max-width: 767px) {
-    body{
-        font-size: 0.9rem;
-        background-size: cover;
-        background-position-x: 35%;
-    }
-    
-    .div-geral{
-        width: 300px;
-    }
+  body {
+    font-size: 0.9rem;
+    background-size: cover;
+    background-position-x: 35%;
+  }
+
+  .div-geral {
+    width: 300px;
+  }
+
+  .div-geral h1 {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    body{
-        font-size: 1.4rem;
-        background-size: cover;
-        background-position-x: 35%;
-        height: 100vh;
-    }
-
+  body {
+    font-size: 1.4rem;
+    background-size: cover;
+    background-position-x: 35%;
+    height: 100vh;
+  }
 }
 
 @media screen and (min-width: 1024px) and (max-height: 789px) {
-    body{
-        font-size: 0.8rem;
-        background-size: cover;
-    }
+  body {
+    font-size: 0.8rem;
+    background-size: cover;
+  }
 
-    h3{
-        padding-bottom: 1rem;
-        padding-top: 1rem;
-    }
-
+  h3 {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
 }
