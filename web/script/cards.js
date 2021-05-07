@@ -1,6 +1,6 @@
 const URL_NARUTO_DECK = "https://app-stun.herokuapp.com/narutoCards";
-const URL_HEROES_DECK = "http://localhost:3000/heroesCards";
-const URL_FUTEBOL_DECK = "http://localhost:3000/futebolCards";
+const URL_HEROES_DECK = "https://app-stun.herokuapp.com/heroesCards";
+const URL_FUTEBOL_DECK = "https://app-stun.herokuapp.com/futebolCards";
 
 async function useGet(url) {
     const response = await fetch(url);
