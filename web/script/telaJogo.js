@@ -7,10 +7,15 @@ const POINT_WIN = 50;
 const URL = "https://app-stun.herokuapp.com/players";
 
 document.addEventListener("DOMContentLoaded", async () => {
-  
-  await deckDivision();
-  changeCardPlayer(deckPlayer[0]);
-  changeCardCPU(deckCPU[0]);
+  try {
+    await deckDivision();
+    changeCardPlayer(deckPlayer[0]);
+    changeCardCPU(deckCPU[0]);
+  } catch (error) {
+    alert("Error: Os deck não foram identificados!!")
+    console.error({error_name: error.name, error_message: error.message});
+  }
+
   firstClick();
 
 
@@ -243,10 +248,10 @@ async function savePlayerStatus(url) {
 }
 
 // chama a função para cadastrar o usuario e a pontuação e segue para a tela de score
-function scoreDocument() {
+async function scoreDocument() {
   const urlParams = new URLSearchParams(location.search);
   const nickname = urlParams.get("nickname");
   let scoreCurrentGame = playerScore;
-  savePlayerStatus(URL);
+  await savePlayerStatus(URL);
   window.location = `http://127.0.0.1:5501/web/components/telaPlacar.html?nickname=${nickname}&score=${scoreCurrentGame}`;
 }
