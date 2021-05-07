@@ -122,6 +122,55 @@ h4 {
   transition: all 0.3s;
 }
 
+.aeronave {
+  width: 170px;
+  height: 250px;
+  background: url("https://i.ibb.co/zRWR9d4/234e10c3976cbeb3996f4be6b46592b4.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #000;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: all 0.3s;
+}
+
+.animal {
+  width: 170px;
+  height: 250px;
+  background: url("https://i.ibb.co/WzHZFct/827d501d00cb70ac2a36b2aeb5c505be.jpg");
+  background-size: cover;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #000;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: all 0.3s;
+}
+
+.automovel {
+  width: 170px;
+  height: 250px;
+  background: url("https://i.ibb.co/9T0jcbh/7b8b7811c80bbbb12a719279fde7eab3.jpg");
+  background-size: cover;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #000;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: all 0.3s;
+}
+
 .hero {
   width: 170px;
   height: 250px;
@@ -158,17 +207,6 @@ h4 {
   border: 2px solid gold;
 }
 
-/* .overlay {
-  position: none;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(63, 26, 26, 0.3);
-} */
-
 .price:hover {
   background-color: gray;
   transition: all 0.3s;
@@ -176,7 +214,10 @@ h4 {
 
 .boruto:hover,
 .formulaUno:hover,
-.hero:hover {
+.hero:hover,
+.animal:hover,
+.automovel:hover,
+.aeronave:hover {
   width: 280px;
   height: 400px;
 }
@@ -226,14 +267,16 @@ h4 {
 
   .container-decks {
     margin-top: 70px;
-    height: 550px;
   }
 
   .boruto:hover,
   .formulaUno:hover,
-  .hero:hover {
-    width: 220px;
-    height: 290px;
+  .hero:hover,
+  .animal:hover,
+  .automovel:hover,
+  .aeronave:hover {
+    width: 200px;
+    height: 270px;
   }
 } */
 
