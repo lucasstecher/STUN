@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+    background-image: url("https://images-ext-1.discordapp.net/external/jW3y3tM8wzcHkPeaNW78kL4D4QYp6PkB1Wzd6tUpaXQ/https/static.cdprojektred.com/cms.cdprojektred.com/16x9_big/a28633a699e653e3cdd11a9c015db53195b72378-1280x720.png?width=1202&height=676");
+    background-size: cover;
+}
+
+h1{
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px black;
+    color: #393E46;
+}
+
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(63, 26, 26, 0.3);
+}
+
+/* vh é o que o usuário enxerga na tela */
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#symbol {
+    background-image: url("https://i.ibb.co/HV2s5wg/202116.png");
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+}
+
+.scoreboard{
+    color: #EEEEEE;
+}
+
+.div-geral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 980px;
+    height: 600px;
+    background-color: #1f867085;
+    border-radius: 25px;
+    position: relative;
+    border: 2px solid #000;
+}
+
+.botao-voltar{
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    left: 870px;
+    top: 40px;
+    background-color: #00640081;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.fa-undo{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* .jogadores div se aplica aos filhos da classe .jogadores (div) */
+
+.jogadores div{
+    font-size: 1.5rem;
+    height: 60px;
+    width: 400px;
+    background-color: #393E46;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    color:  #EEEEEE;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+
+#medalha1 {
+    background-color: #FFd700;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#medalha2 {
+    background-color: #c0c0c0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#medalha3 {
+    background-color: #b87333;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.score{
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px black;
+    color: #EEEEEE;
+}
+
+@media screen and (max-width: 767px) {
+    .div-geral{
+        width: 350px;
+    }
+
+    .jogadores div{
+        height: 60px;
+        width: 330px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        padding: 10px;
+    }
+
+    .botao-voltar{
+        position: relative;
+        left: 120px;
+        top: 5px;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .div-geral{
+        width: 650px;
+    }
+
+    .jogadores div{
+        height: 60px;
+        width: 500px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        padding: 10px;
+    }
+
+    .botao-voltar{
+        position: relative;
+        left: 260px;
+        top: 15px;
+        width: 70px;
+        height: 70px;
+    }
+}

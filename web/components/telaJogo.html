@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/favicon.ico" />
+    <link rel="stylesheet" href="../css/style-tela-jogo.css" />
+    <title>STUN - Super Trunfo</title>
+  </head>
+  <body>
+    <div class="tela-jogo__container">
+      <div class="tela-jogo__title">
+        <div id="logo"><img src="" alt="" /></div>
+        <span id="mensagem-player">Clique na carta e escolha o atributo</span>
+      </div>
+      <div class="tela-jogo__container-cartas">
+        <div class="tela-jogo__content" id="card-click">
+          <h3>Jogador</h3>
+          <div>
+            <span id="qtd-cartas-player" class="qtd-cartas-pontos">10</span
+            ><span class="divisao-pontos">|</span>
+            <span class="placar-valor qtd-cartas-pontos" id="jogador-placar"
+              >0</span
+            >
+          </div>
+          <div class="tela-jogo__card1 tela-jogo__cards" id="card1">
+            <img src="https://i.ibb.co/wKQ10sj/naruto.jpg" alt="Naruto" />
+            <h3>Naruto Uzumaki</h3>
+            <div class="atr-player-card">Ninjutsu: 55</div>
+            <div class="atr-player-card">Taijutsu: 35</div>
+            <div class="atr-player-card">Genjutsu: 20</div>
+            <div class="atr-player-card">Inteligência: 30</div>
+          </div>
+        </div>
+
+        <h3 class="tela-jogo__vs">
+          rodada<span id="tela-jogo__rodada">1</span>
+        </h3>
+
+        <div class="tela-jogo__content" id="tela-jogo__content-cpu">
+          <h3 class="nomeCPU">CPU</h3>
+          <div>
+            <span id="qtd-cartas-cpu" class="qtd-cartas-pontos">10</span
+            ><span class="divisao-pontos">|</span
+            ><span class="placar-valor qtd-cartas-pontos" id="cpu-placar"
+              >0</span
+            >
+          </div>
+          <div class="tela-jogo__card2 tela-jogo__cards" id="card2">
+            <img src="https://i.ibb.co/wKQ10sj/naruto.jpg" alt="Naruto" />
+            <h3>Shikamaru</h3>
+            <div class="atr-cpu-card">Ninjutsu: 50</div>
+            <div class="atr-cpu-card">Taijutsu: 45</div>
+            <div class="atr-cpu-card">Genjutsu: 40</div>
+            <div class="atr-cpu-card">Inteligência: 50</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer"></div>
+    </div>
+    <script src="../script/background.js"></script>
+    <script src="../script/cards.js"></script>
+    <script src="../script/telaJogo.js"></script>
+  </body>
+</html>
