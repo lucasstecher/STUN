@@ -1,4 +1,4 @@
-<h2 align="center"><img src="doc/STUN.png" width="400"></h2>
+<h2 align="center"><img src="../doc/STUN.png" width="400"></h2>
 
 <h3 align="center">Backend da aplicação STUN</h3>
 
@@ -6,9 +6,11 @@
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 
----
+</div>
 
-<p align="center"> Projeto construido para utilizando Node.js e postgreSQL. 
+<div>
+
+<p align="center"> Projeto desenvolvido com o uso do Node.js e postgreSQL. 
    <br>
 </p>
 
@@ -17,20 +19,19 @@
 - [Sobre](#about)
 - [Iniciando](#getting_started)
 - [Deploy](#deploy)
-- [Testes](#tests)
 - [Uso](#usage)
 - [Construído utilizando](#built_using)
-- [Authors](#authors)
+- [Autores](#autores)
 
 ## 🧐 Sobre <a name = "about"></a>
 
-API e banco de dados para a aplicação STUN (Super Trunfo). A aplicação é um repositório para gerenciar cartas  e a pontuação dos players.
+API e banco de dados para a aplicação STUN (Super Trunfo). A aplicação é um repositório para gerenciar as cartas e a pontuação dos players.
 
 
 ## 🏁 Iniciando <a name = "getting_started"></a>
 
 ### Rotas da Aplicação
-- **`players`**
+#### players
 - **`POST /players`**: Rota para cadastrar um novo player
 
 - **`GET /players?limit={limit}`**: Rota para listar todos os players cadastrados ordenados através da pontuação, quando não determinado um valor para limit é retornado o top 3 players.
@@ -41,7 +42,7 @@ API e banco de dados para a aplicação STUN (Super Trunfo). A aplicação é um
 
 - **`PUT /players/{id}`**: Rota para atualizar um player.
 
-- **`Deck Naruto`**
+#### Deck Naruto
 - **`POST /narutoCards`**: Rota para cadastrar uma nova carta para o deck de Naruto.
 
 - **`GET /narutoCards?limit={limit}`**: Rota para listar todas as cartas cadastradas, quando não determinado um valor para limit é retornado as 20 primeiras cartas.
@@ -50,7 +51,7 @@ API e banco de dados para a aplicação STUN (Super Trunfo). A aplicação é um
 
 - **`PUT /narutoCards/{id}`**: Rota para atualizar uma carta.
 
-- **`Deck Heróis`**
+#### Deck Heróis
 - **`POST /heroesCards`**: Rota para cadastrar uma nova carta para o deck de Herois.
 
 - **`GET /heroesCards?limit={limit}`**: Rota para listar todas as cartas cadastradas, quando não determinado um valor para limit é retornado as 20 primeiras cartas.
@@ -59,7 +60,7 @@ API e banco de dados para a aplicação STUN (Super Trunfo). A aplicação é um
 
 - **`PUT /heroesCards/{id}`**: Rota para atualizar uma carta.
 
-- **`Deck Futebol`**
+#### Deck Futebol
 - **`POST /futebolCards`**: Rota para cadastrar uma nova carta para o deck de Futebol.
 
 - **`GET /futebolCards?limit={limit}`**: Rota para listar todas as cartas cadastradas, quando não determinado um valor para limit é retornado as 20 primeiras cartas.
@@ -70,13 +71,13 @@ API e banco de dados para a aplicação STUN (Super Trunfo). A aplicação é um
 
 ## 🚀 Deploy<a name = "deploy"></a>
 
-Você pode utilizar a API, está aqui: `https://app-stun.herokuapp.com`
+Você pode utilizar a API, está aqui: [https://app-stun.herokuapp.com](https://app-stun.herokuapp.com)
 
 <!-- ![Deploy API](https://i.gyazo.com/a96c1e3481fab9909a8f76f4b10bc3ad.gif) -->
 
 ## Como contribuir?
 
-Você pode utilizar esse projeto para 
+Você pode utilizar esse projeto para Ampliar suas funcionalidades.
 
 ### Requisitos
 
@@ -101,29 +102,29 @@ npm start
 - [Express](https://expressjs.com/)
 
 
-## ✍️ Authors <a name = "authors"></a>
+## ✍️ Autores <a name = "autores"></a>
 
 👤 **Isac Sousa**
 
-- Github: [@isacsousa](https://github.com/meIsacSousa)
-- LinkedIn: [@isacsousa](https://www.linkedin.com/in/meisacsousa/)
+- Github: [@isacSousa](https://github.com/meIsacSousa)
+- LinkedIn: [@isacSousa](https://www.linkedin.com/in/meisacsousa/)
 
 👤 **Emerson Moreira**
 
-- Github: [@emersonmoreira](https://github.com/eemr3)
-- LinkedIn: [@emersonmoreira](https://www.linkedin.com/in/emerson-moreira/)
+- Github: [@emersonMoreira](https://github.com/eemr3)
+- LinkedIn: [@emersonMoreira](https://www.linkedin.com/in/emerson-moreira/)
 
 👤 **Peterson Cabrini**
 
-- Github: [@petersoncabrini](https://github.com/petersoncabrini)
-- LinkedIn: [@petersoncabrini](https://www.linkedin.com/in/petersoncabrini/)
+- Github: [@petersonCabrini](https://github.com/petersoncabrini)
+- LinkedIn: [@petersonCabrini](https://www.linkedin.com/in/petersoncabrini/)
 
 👤 **Lucas Vieira Stecher**
 
-- Github: [@lucasstecher](https://github.com/lucasstecher)
-- LinkedIn: [@lucasstecher](https://www.linkedin.com/in/lucas-stecher/)
+- Github: [@lucasStecher](https://github.com/lucasstecher)
+- LinkedIn: [@lucasStecher](https://www.linkedin.com/in/lucas-stecher/)
 
 👤 **Armando Hector Rodriguez**
 
 - Github: [@armandoH](https://github.com/armandoH99)
-- LinkedIn: [@armandoH]()
+- LinkedIn: [@armandoH](https://www.linkedin.com/in/armando-hector-97a61519a)
