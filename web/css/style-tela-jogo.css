@@ -13,6 +13,23 @@
   box-sizing: border-box;
 }
 
+h3 {
+  font-size: 25px;
+  font-family: "Abel", sans-serif;
+  color: rgb(224, 213, 213);
+  text-shadow: 0 0 2px rgb(255, 255, 255);
+  transform: translatey(10px);
+  margin-bottom: 30px;
+}
+
+p {
+  font-family: "Abel", sans-serif;
+  color: var(--text-primary);
+  text-align: center;
+  width: 220px;
+  transform: translatex(12px);
+}
+
 #qtd-cartas {
   display: inline-block;
 }
@@ -112,23 +129,6 @@
   height: 150px;
 }
 
-h3 {
-  font-size: 25px;
-  font-family: "Abel", sans-serif;
-  color: rgb(224, 213, 213);
-  text-shadow: 0 0 2px rgb(255, 255, 255);
-  transform: translatey(10px);
-  margin-bottom: 30px;
-}
-
-p {
-  font-family: "Abel", sans-serif;
-  color: var(--text-primary);
-  text-align: center;
-  width: 220px;
-  transform: translatex(12px);
-}
-
 .tela-jogo__card2 {
   border-radius: 15px;
   text-align: center;
@@ -139,14 +139,13 @@ p {
   margin-bottom: 10px;
   animation: animate 1s linear infinite;
   transition: 0.6s;
-  opacity: 0.15;
+  opacity: 0.1;
   transform: rotatex(75deg) translatey(-200px) translatez(-100px);
   box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .tela-jogo__card2 div {
   margin-bottom: 4px;
-
   background-color: var(--bg-div-btn);
   font-family: "Abel", sans-serif;
   color: var(--text-primary);
@@ -206,7 +205,7 @@ p {
   }
 
   .tela-jogo__card2 {
-    opacity: 0.2;
+    opacity: 0.1;
   }
 
   .card2-hover {
@@ -226,9 +225,47 @@ p {
     margin-top: 0px;
     margin-bottom: 10px;
   }
+
+  .tela-jogo__card1,
+  .tela-jogo__card2 {
+    width: 150px;
+    height: 230px;
+  }
+
+  .tela-jogo__card1 div {
+    margin-left: 1px;
+    padding-left: 6px;
+
+    width: 126px;
+  }
+
+  .tela-jogo__card1 img {
+    width: 80px;
+    height: 65px;
+  }
+
+  .tela-jogo__card1 h3 {
+    font-size: 17px;
+  }
+
+  .tela-jogo__card2 div {
+    margin-left: 1px;
+    padding-left: 6px;
+
+    width: 126px;
+  }
+
+  .tela-jogo__card2 img {
+    width: 80px;
+    height: 65px;
+  }
+
+  .tela-jogo__card2 h3 {
+    font-size: 17px;
+  }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 884px) {
   .tela-jogo__container-cartas {
     display: flex;
     flex-direction: column;
@@ -245,7 +282,7 @@ p {
   }
 
   .tela-jogo__card2 {
-    opacity: 0.2;
+    opacity: 0.1;
   }
 
   .card2-hover {
@@ -278,14 +315,163 @@ p {
     height: 100%;
     background: url("https://i.pinimg.com/originals/a6/c9/1c/a6c91c7d41bfc9fafaacde0f0a18145d.jpg");
     background-size: cover;
+    background-position-x: 40%;
+
     position: unset;
   }
-
-  /* .nomeCPU {
-    margin-top: 100px;
-  } */
 }
 
+@media screen and (min-width: 885px) and (max-width: 1024px) {
+  .tela-jogo__container-cartas {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .tela-jogo__title h1 {
+    font-size: 30px;
+  }
+
+  .tela-jogo__card1 {
+    transform: rotatex(61deg) translatey(-200px) translatez(-100px);
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
+  }
+
+  .tela-jogo__card2 {
+    opacity: 0.1;
+  }
+
+  .card2-hover {
+    opacity: 1;
+  }
+
+  .card1-hover {
+    transform: rotatex(0deg);
+    transition: 0.6s;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .tela-jogo__vs h3 {
+    display: block;
+    height: 0px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .tela-jogo__title span {
+    margin-top: 27px;
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 13px;
+    margin: 50px 0 20px 0;
+  }
+
+  .tela-jogo__container {
+    background: url("https://i.pinimg.com/originals/a6/c9/1c/a6c91c7d41bfc9fafaacde0f0a18145d.jpg");
+    background-size: cover;
+    position: unset;
+  }
+}
+
+@media (min-aspect-ratio: 1024/768) {
+  .tela-jogo__container {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .tela-jogo__container-cartas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100vh;
+  }
+
+  .tela-jogo__card1,
+  .tela-jogo__card2 {
+    width: 150px;
+    height: 230px;
+  }
+
+  .tela-jogo__card1 {
+    transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+  }
+  .tela-jogo__card1 div {
+    margin-left: 1px;
+    padding-left: 6px;
+
+    width: 126px;
+  }
+
+  .tela-jogo__card1 img {
+    width: 80px;
+    height: 65px;
+  }
+
+  .tela-jogo__card1 h3 {
+    font-size: 17px;
+  }
+
+  .tela-jogo__card2 div {
+    margin-left: 1px;
+    padding-left: 6px;
+
+    width: 126px;
+  }
+
+  .tela-jogo__card2 img {
+    width: 80px;
+    height: 65px;
+  }
+
+  .tela-jogo__card2 h3 {
+    font-size: 17px;
+  }
+
+  .tela-jogo__container-cartas {
+    margin-top: 0px;
+    height: 520px;
+  }
+}
+
+@media (min-aspect-ratio: 1920 / 1080) {
+  .tela-jogo__card1,
+  .tela-jogo__card2 {
+    width: 250px;
+    height: 330px;
+  }
+
+  .tela-jogo__card1 div {
+    margin-left: 10px;
+    padding-left: 10px;
+
+    width: 200px;
+  }
+
+  .tela-jogo__card1 img {
+    width: 160px;
+    height: 140px;
+  }
+
+  .tela-jogo__card1 h3 {
+    font-size: 17px;
+  }
+
+  .tela-jogo__card2 div {
+    margin-left: 10px;
+    padding-left: 10px;
+
+    width: 200px;
+  }
+
+  .tela-jogo__card2 img {
+    width: 160px;
+    height: 140px;
+  }
+}
 /*-- Tela Laptop */
 
 @media screen and (min-width: 1336px) and (max-width: 1440px) {
