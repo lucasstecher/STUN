@@ -374,7 +374,7 @@ p {
   }
 }
 
-@media (min-aspect-ratio: 1024/768) {
+@media screen and (min-aspect-ratio: 4/3) {
   .tela-jogo__container {
     height: 100%;
     background-repeat: no-repeat;
@@ -434,6 +434,19 @@ p {
   .tela-jogo__container-cartas {
     margin-top: 0px;
     height: 520px;
+  }
+
+  .card1-hover {
+    transform: rotatex(0deg);
+    transition: 0.6s;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  }
+  .card2-hover {
+    transform: rotatex(0deg);
+    transition: 0.6s;
+    opacity: 1;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   }
 }
 
