@@ -128,4 +128,3 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 Feito com ❤️ pelo #SQUAD-7
->>>>>>> 8b650eee10f76ba8e82c093dbb27aa9871d2000a
