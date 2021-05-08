@@ -363,6 +363,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 270px;
 }
 
 .tela-jogo__content span {
