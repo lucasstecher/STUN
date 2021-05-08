@@ -1,7 +1,5 @@
 <h2 align="center"><img src="doc/STUN.png" width="400"></h2>
 
-
-
 <p align="center">
     <img alt="Last commit" src="https://img.shields.io/github/last-commit/lucasstecher/STUN"/>
   <img alt="Language top" src="https://img.shields.io/github/languages/top/lucasstecher/STUN"/>
@@ -11,15 +9,13 @@
   </a>
 </p>
 
-___
-
+---
 
 ## Descrição:
 
 <p>Este projeto tem o objetivo de criar melhorias no projeto Trunfo criado durante a ImersãoDev da Alura, criando assim uma aplicação mais completa para a participação na Hackatun Programa de Formação do <a href="https://www.fcamara.com.br/">Grupo FCamara</a></p>
 
-___
-
+---
 
 <h3 align="center">
   <a href="#pencil-web">Web</a>&nbsp;|&nbsp;
@@ -30,16 +26,18 @@ ___
   <a href="#licença">Licença</a>
 </h3>
 
-___
+---
+
 ## Preview da aplicação
 
 <img align="center" src="doc/STUN-Inicio.gif" alt="portfolio-vuejs preview" width="1200"></img>
 
-
 ## :pencil: Web
 
 Esta pasta é onde se encontra o front-end da aplicação: Os arquivos HTML - CSS - JS.
+
 ### Pastas do projeto
+
 ```
 web
  ┣ 📂.vscode
@@ -64,10 +62,14 @@ web
  ┃ ┣ 📜scoreBoard.js
  ┃ ┗ 📜telaJogo.js
  ┗ 📜index.html
- ```
+```
+
 ## :factory: Server
+
 Esta pasta é onde se encontra o back-end da aplicação.
+
 ### Pastas do projeto
+
 ```
 📦server
  ┣ 📂src
@@ -92,11 +94,12 @@ Esta pasta é onde se encontra o back-end da aplicação.
  ┃ ┗ 📜server.js
  ┣ 📜.gitignore
  ┣ 📜package-lock.json
- ┗ 📜package.json 
- ```
- #### [Dcomentação do back-end](server/README.md)
+ ┗ 📜package.json
+```
 
-## :rocket: Tecnologias Utilizadas 
+#### [Dcomentação do back-end](server/README.md)
+
+## :rocket: Tecnologias Utilizadas
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 
@@ -104,7 +107,6 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Bootstrap](https://getbootstrap.com/)
-
 
 ## :construction_worker: SQUAD-7
 
@@ -114,7 +116,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 - [Lucas Vieira Stecher](https://github.com/lucasstecher)
 - [Peterson Cabrini](https://github.com/petersoncabrini)
 
-## :link: Como contribuir 
+## :link: Como contribuir
 
 - Faça um Fork do repositório
 - Clone o seu repositório
@@ -123,9 +125,8 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 - 'Push' a sua branch
 - Ir em Pull Requests do projeto original e criar uma pull request com o seu commit
 
-## Licença 
+## Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 Feito com ❤️ pelo #SQUAD-7
->>>>>>> 8b650eee10f76ba8e82c093dbb27aa9871d2000a
