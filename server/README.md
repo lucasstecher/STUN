@@ -67,7 +67,7 @@ API e banco de dados para a aplicação STUN (Super Trunfo). A aplicação é um
 
 - **`PUT /futebolCards/{id}`**: Rota para atualizar uma carta.
 
-Para mais informações acesse: [documentação](https://app.swaggerhub.com/apis-docs/meIsacSousa/STUN-API/1.0.0)
+### Para mais informações acesse: [documentação](https://app.swaggerhub.com/apis-docs/meIsacSousa/STUN-API/1.0.0)
 
 ## 🚀 Deploy<a name = "deploy"></a>
 
