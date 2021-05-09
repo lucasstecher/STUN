@@ -36,8 +36,6 @@ API e banco de dados para a aplicação STUN (Super Trunfo). A aplicação é um
 
 - **`GET /players?limit={limit}`**: Rota para listar todos os players cadastrados ordenados através da pontuação, quando não determinado um valor para limit é retornado o top 3 players.
 
-- **`GET /players/{id}}`**: Rota para listar player utilizando uma busca por id.
-
 - **`DELETE /players/{id}`**: Rota para deletar um player.
 
 - **`PUT /players/{id}`**: Rota para atualizar um player.
@@ -68,6 +66,8 @@ API e banco de dados para a aplicação STUN (Super Trunfo). A aplicação é um
 - **`DELETE /futebolCards/{id}`**: Rota para deletar uma carta.
 
 - **`PUT /futebolCards/{id}`**: Rota para atualizar uma carta.
+
+### Para mais informações acesse: [documentação](https://app.swaggerhub.com/apis-docs/meIsacSousa/STUN-API/1.0.0)
 
 ## 🚀 Deploy<a name = "deploy"></a>
 
