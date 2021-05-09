@@ -136,7 +136,7 @@ function attributeCPUSelection() {
       attributeCPUSelection();
     }
   
-  }, 3000); 
+  }, 2500); 
 }
 
 // altera contéudo da tela para indicar jogada do player
