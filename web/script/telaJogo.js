@@ -36,6 +36,8 @@ function firstClick() {
   });
 }
 
+// no decorrer das funções diversas vezes será usado o settimeout
+// o settimeout nesses casos está sendo usado para tentar equiparar os eventos as animações da carta
 // comparação de atributos
 function attributeSelection(e) {
   // levanta carta do oponente
@@ -71,8 +73,9 @@ function positionReturn() {
   cardPlayer.classList.remove("card1-hover");
   cardCPU.classList.remove("card2-hover");
   // após posicionar as cartas, atualiza score e round.
-  updateRound();
-  updateScore();
+  setTimeout(() => {
+    updateRound();
+  }, 700)
 }
 
 // atualiza round apresentado em tela
@@ -82,10 +85,8 @@ function updateRound() {
   roundsDiplay.innerHTML = rounds;
   
   // atualiza as cartas
-  setTimeout(() => {
     changeCardPlayer(deckPlayer[0]);
     changeCardCPU(deckCPU[0]);
-  }, 700);
 }
 
 // atualiza pontuação em tela
@@ -96,15 +97,12 @@ function updateScore() {
   let cardsCountPlayer = document.getElementById("qtd-cartas-player");
   let cardsCountCPU = document.getElementById("qtd-cartas-cpu");
  
-  setTimeout(()=>{
    // atualiza pontuação
    placarPlayer.innerHTML = playerScore;
    placarCpu.innerHTML = CpuScore;
    //atualiza quantida de cartas
    cardsCountPlayer.innerHTML = deckPlayer.length;
    cardsCountCPU.innerHTML = deckCPU.length;
-  }, 700);
-
 }
 
 // controla jogada da CPU
@@ -138,7 +136,7 @@ function attributeCPUSelection() {
       attributeCPUSelection();
     }
   
-  }, 2500); 
+  }, 3000); 
 }
 
 // altera contéudo da tela para indicar jogada do player
@@ -212,6 +210,7 @@ async function deckDivision() {
 function winMove(deckWinner, deckLoser) {
   deckWinner.push(deckLoser.shift());
   deckWinner.push(deckWinner.shift());
+  setTimeout(updateScore, 700);
   gameOver();
 }
 
