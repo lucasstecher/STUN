@@ -13,7 +13,7 @@
 
 ## Descrição:
 
-<p>Este projeto tem o objetivo de criar melhorias no projeto Trunfo criado durante a ImersãoDev da Alura, criando assim uma aplicação mais completa para a participação na Hackatun Programa de Formação do <a href="https://www.fcamara.com.br/">Grupo FCamara</a></p>
+<p>Este projeto tem o objetivo de criar melhorias no projeto Trunfo criado durante a ImersãoDev da Alura, criando assim uma aplicação mais completa para a participação na Hackathon Programa de Formação do <a href="https://www.fcamara.com.br/">Grupo FCamara</a></p>
 
 <span>Observação: A aplicação é compatível com todos os navegadores web atuais com exceção do Mozilla Firefox e Internet Explorer devido a animações 3D utilizadas na movimentação das cartas (adaptação para o Mozilla Firefox em processo de implementação).</span>
 
@@ -100,7 +100,7 @@ Esta pasta é onde se encontra o back-end da aplicação.
  ┗ 📜package.json
 ```
 
-#### [Dcomentação do back-end](server/README.md)
+#### [Docomentação do back-end](server/README.md)
 
 ## :rocket: Tecnologias Utilizadas
 
