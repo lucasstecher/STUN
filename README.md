@@ -38,7 +38,7 @@
 
 Esta pasta é onde se encontra o front-end da aplicação: Os arquivos HTML - CSS - JS.
 
-## [Demo](https://stun.vercel.app/)
+## [Acesso a plicação via https://stun.vercel.app](https://stun.vercel.app)
 ### Pastas do projeto
 
 ```
@@ -100,7 +100,7 @@ Esta pasta é onde se encontra o back-end da aplicação.
  ┗ 📜package.json
 ```
 
-#### [Docomentação do back-end](server/README.md)
+#### [Documentação do back-end](server/README.md)
 
 ## :rocket: Tecnologias Utilizadas
 
