@@ -255,5 +255,5 @@ async function scoreDocument() {
   const nickname = urlParams.get("nickname");
   let scoreCurrentGame = playerScore;
   await savePlayerStatus(URL);
-  window.location = `http://127.0.0.1:5501/web/components/telaPlacar.html?nickname=${nickname}&score=${scoreCurrentGame}`;
+  window.location = `https://stun.vercel.app/components/telaPlacar.html?nickname=${nickname}&score=${scoreCurrentGame}`;
 }
