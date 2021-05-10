@@ -322,9 +322,11 @@ h4 {
 
   .boruto:hover,
   .formulaUno:hover,
-  .hero:hover {
-    width: 230px;
-    height: 300px;
+  .hero:hover,
+  .aeronave:hover,
+  .automovel:hover {
+    width: 220px;
+    height: 290px;
   }
 }
 
