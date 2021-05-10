@@ -1,24 +1,180 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:700");
+@import url("https://fonts.googleapis.com/css?family=Abel");
+:root {
+  --bg-color: #aad8d3;
+  --text-color: #fff;
+}
 
-  @import url("https://fonts.googleapis.com/css?family=Exo:700");
-  @import url("https://fonts.googleapis.com/css?family=Abel");
-  :root {
-    --bg-color: #aad8d3;
-    --text-color: #fff;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Exo", sans-serif;
+  font-size: 87%;
+  background: url("https://i.ibb.co/g60Cs1F/tela-Multiplayer.jpg");
+  background-repeat: no-repeat;
+  color: var(--text-color);
+  background-position-x: center;
+}
+
+.aviso {
+  height: 40px;
+  background-color: red;
+  font-size: 25px;
+  text-align: center;
+  padding: 2px;
+}
+
+/*Cor da barra*/
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  z-index: 99;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #5c2c877d;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
   }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+  .topnav {
+    position: absolute;
+    z-index: 9999;
+    width: 100vw;
   }
-  
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.container__informacao {
+  width: 90%;
+  height: 190px;
+  margin-top: 15px;
+  background-color: #5c2c877d;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.container__informacao h1 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
+.container__informacao input {
+  width: 250px;
+  height: 30px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 1.2rem;
+}
+
+.container__modes {
+  width: 90%;
+  padding: 15px 0;
+  margin-top: 15px;
+  background-color: #5c2c877d;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.primeiro__mode {
+  width: 176px;
+  height: 242px;
+  background: url("https://i.ibb.co/hRyRfdZ/200170.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.segundo__mode {
+  width: 230px;
+  height: 240px;
+  background: url("https://i.ibb.co/7vVjk0x/201589.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.gameMode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameMode h2 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 1024px) {
   body {
-    font-family: "Exo", sans-serif;
-    font-size: 87%;
     background: url("https://i.ibb.co/g60Cs1F/tela-Multiplayer.jpg");
-    background-repeat: no-repeat;
-    color: var(--text-color);
-    background-position-x: center;
+    background-size: cover;
+  }
+
+  #logo {
+    width: 400px;
+    height: 250px;
+    background: url("https://i.ibb.co/yQsqVPz/STUN.png") no-repeat;
+    background-size: contain;
+    margin-bottom: -70px;
+    /* margin-top: 65px; */
+    z-index: 999;
   }
 
   .aviso {
@@ -28,113 +184,63 @@
     text-align: center;
     padding: 2px;
   }
-  
-  /*Cor da barra*/
-  .topnav {
-    background-color: #333;
-    overflow: hidden;
-    z-index: 99;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 10px 16px;
-    text-decoration: none;
-    font-size: 15px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #5c2c877d;
-  }
-  
-  .topnav .icon {
-    display: none;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {
-      display: none;
-    }
-  
-    .topnav {
-      position: absolute;
-      z-index: 9999;
-      width: 100vw;
-    }
-    .topnav a:not(:first-child) {
-      display: none;
-    }
-  
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    .topnav.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-  }
-  
+
   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    z-index: 5;
+    max-width: 980px;
+    margin: 0 auto;
+    margin-top: -25px;
     height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  
+
   .container__informacao {
-    width: 90%;
-    height: 190px;
-    margin-top: 15px;
-    background-color: #5c2c877d;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
+    width: 65%;
+    max-height: 15%;
+    border: 2px solid black;
   }
-  
+
   .container__informacao h1 {
-    font-size: 1.8rem;
-    margin-top: 10px;
-  }
-  
-  .container__informacao input {
-    width: 250px;
-    height: 30px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 0;
-    font-size: 1.2rem;
-  }
-  
-  .container__modes {
-    width: 90%;
-    padding: 15px 0;
+    font-size: 3rem;
     margin-top: 15px;
-    background-color: #5c2c877d;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
   }
-  
+
+  .container__informacao input {
+    width: 60%;
+    height: 40px;
+    padding: 14px 10px;
+    border-radius: 7px;
+    border: 0;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  .container__modes {
+    width: 65%;
+    border: 2px solid black;
+    margin-bottom: 50px;
+  }
+
+  .container__modes h3 {
+    letter-spacing: 0.2rem;
+    font-size: 30px;
+    margin-bottom: 74px;
+  }
+  .gameModes {
+    display: flex;
+    gap: 30px;
+  }
+
+  .gameMode h2 {
+    margin-top: -30px;
+  }
+
   .primeiro__mode {
     width: 176px;
-    height:242px;
+    height: 242px;
     background: url("https://i.ibb.co/hRyRfdZ/200170.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -143,299 +249,187 @@
 
   .segundo__mode {
     width: 230px;
-    height:240px;
+    height: 240px;
     background: url("https://i.ibb.co/7vVjk0x/201589.png");
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
   }
-  
+
+  .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(63, 26, 26, 0.7);
+  }
+
+  footer {
+    letter-spacing: 0.12rem;
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  #logo {
+    width: 230px;
+    height: 170px;
+    background: url("https://i.ibb.co/yQsqVPz/STUN.png") no-repeat;
+    background-size: contain;
+    margin-bottom: -60px;
+    z-index: 999;
+  }
+
+  .aviso {
+    height: 25px;
+    background-color: red;
+    font-size: 18px;
+    text-align: center;
+    padding: 2px;
+  }
+
+  .container__informacao {
+    width: 55%;
+    border: 2px solid black;
+  }
+
+  .container__informacao h1 {
+    font-size: 2rem;
+    margin-top: 15px;
+  }
+
+  .container__modes h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+  }
+
+  .container__informacao input {
+    width: 60%;
+    height: 35px;
+    border-radius: 7px;
+    border: 0;
+    font-size: 1.4rem;
+  }
+
+  .container__modes {
+    width: 55%;
+    border: 2px solid black;
+    margin-bottom: 25px;
+  }
+
   .gameMode {
-    display: flex;
-    flex-direction: column;
+    font-size: 15px;
+  }
+
+  .gameMode h2 {
+    margin-top: 10px;
+  }
+
+  .primeiro__mode {
+    width: 150px;
+    height: 150px;
+    background: url("https://i.ibb.co/hRyRfdZ/200170.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .segundo__mode {
+    width: 150px;
+    height: 150px;
+    background: url("https://i.ibb.co/7vVjk0x/201589.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #logo {
+    width: 240px;
+    height: 170px;
+    background: url("https://i.ibb.co/yQsqVPz/STUN.png") no-repeat;
+    background-size: contain;
+    margin-bottom: -80px;
+    margin-top: 50px;
+    z-index: 999;
+  }
+
+  .container {
+    z-index: 5;
+    max-width: 980px;
+    margin: 0 auto;
     align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
   }
-  
-  .gameMode h2 {
-    margin: 10px 0;
+
+  .container__informacao {
+    width: 80%;
+    height: 20%;
+    border: 2px solid black;
+  }
+
+  .container__informacao h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+
+  .container__modes h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .container__informacao input {
+    width: 75%;
+    height: 40px;
+    border-radius: 7px;
+    border: 0;
+    font-size: 1.4rem;
+  }
+
+  .container__modes {
+    width: 80%;
+    border: 2px solid black;
+  }
+
+  .gameMode {
     font-size: 20px;
+    margin-top: 0;
   }
-  
-  @media screen and (min-width: 1024px) {
-    body {
-      background: url("https://i.ibb.co/g60Cs1F/tela-Multiplayer.jpg");
-      background-size: cover;
-    }
-  
-    #logo {
-      width: 400px;
-      height: 250px;
-      background: url("https://i.ibb.co/yQsqVPz/STUN.png") no-repeat;
-      background-size: contain;
-      margin-bottom: -70px;
-      /* margin-top: 65px; */
-      z-index: 999;
-    }
 
-    .aviso {
-      height: 40px;
-      background-color: red;
-      font-size: 25px;
-      text-align: center;
-      padding: 2px;
-    }
-  
-    .container {
-      z-index: 5;
-      max-width: 980px;
-      margin: 0 auto;
-      margin-top: -25px;
-      height: 100vh;
-      align-items: center;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  
-    .container__informacao {
-      width: 65%;
-      max-height: 15%;
-      border: 2px solid black;
-    }
-  
-    .container__informacao h1 {
-      font-size: 3rem;
-      margin-top: 15px;
-    }
-  
-    .container__informacao input {
-      width: 60%;
-      height: 40px;
-      padding: 14px 10px;
-      border-radius: 7px;
-      border: 0;
-      font-size: 1.4rem;
-      margin-bottom: 15px;
-    }
-  
-    .container__modes {
-      width: 65%;
-      border: 2px solid black;
-      margin-bottom: 50px;
-    }
-  
-    .container__modes h3 {
-      letter-spacing: 0.2rem;
-      font-size: 30px;
-      margin-bottom: 74px;
-    }
-    .gameModes {
-      display: flex;
-      gap: 30px;
-    }
-
-    .gameMode h2 {
-      margin-top: -30px;
-    }
-
-        .primeiro__mode {
-      width: 176px;
-      height:242px;
-      background: url("https://i.ibb.co/hRyRfdZ/200170.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      cursor: pointer;
-    }
-  
-    .segundo__mode {
-      width: 230px;
-      height:240px;
-      background: url("https://i.ibb.co/7vVjk0x/201589.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      cursor: pointer;
-    }
-
-  
-    .overlay {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(63, 26, 26, 0.7);
-    }
-  
-    footer {
-      letter-spacing: 0.12rem;
-      margin-top: 8px;
-    }
+  .primeiro__mode {
+    width: 176px;
+    height: 242px;
+    background: url("https://i.ibb.co/hRyRfdZ/200170.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
   }
-  
-  @media screen and (max-width: 1366px) {
-    #logo {
-      width: 250px;
-      height: 170px;
-      background: url("https://i.ibb.co/yQsqVPz/STUN.png") no-repeat;
-      background-size: contain;
-      margin-bottom: -60px;
-      z-index: 999;
-    }
 
-    .aviso {
-      height: 25px;
-      background-color: red;
-      font-size: 18px;
-      text-align: center;
-      padding: 2px;
-    }
-  
-    .container__informacao {
-      width: 55%;
-      border: 2px solid black;
-    }
-  
-    .container__informacao h1 {
-      font-size: 2rem;
-      margin-top: 15px;
-    }
-  
-    .container__modes h3 {
-      font-size: 17px;
-      margin-bottom: 5px;
-    }
-  
-    .container__informacao input {
-      width: 60%;
-      height: 35px;
-      border-radius: 7px;
-      border: 0;
-      font-size: 1.4rem;
-    }
-  
-    .container__modes {
-      width: 55%;
-      border: 2px solid black;
-      margin-bottom: 25px;
-    }
-  
-    .gameMode {
-      font-size: 15px;
-    }
-
-    .gameMode h2 {
-      margin-top: 10px;
-    }
-  
-    .primeiro__mode {
-      width: 150px;
-      height:196px;
-      background: url("https://i.ibb.co/hRyRfdZ/200170.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      cursor: pointer;
-    }
-  
-    .segundo__mode {
-      width: 190px;
-      height:190px;
-      background: url("https://i.ibb.co/7vVjk0x/201589.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      cursor: pointer;
-    }
+  .segundo__mode {
+    width: 230px;
+    height: 240px;
+    background: url("https://i.ibb.co/7vVjk0x/201589.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
   }
-  
-  @media screen and (max-width: 1024px) {
-    #logo {
-      width: 240px;
-      height: 170px;
-      background: url("https://i.ibb.co/yQsqVPz/STUN.png") no-repeat;
-      background-size: contain;
-      margin-bottom: -80px;
-      margin-top: 50px;
-      z-index: 999;
-    }
-  
-    .container {
-      z-index: 5;
-      max-width: 980px;
-      margin: 0 auto;
-      align-items: center;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  
-    .container__informacao {
-      width: 80%;
-      height: 20%;
-      border: 2px solid black;
-    }
-  
-    .container__informacao h1 {
-      font-size: 2rem;
-      margin-top: 20px;
+}
 
-    }
-  
-    .container__modes h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-  
-    .container__informacao input {
-      width: 75%;
-      height: 40px;
-      border-radius: 7px;
-      border: 0;
-      font-size: 1.4rem;
-    }
-  
-    .container__modes {
-      width: 80%;
-      border: 2px solid black;
-    }
-  
-    .gameMode {
-      font-size: 20px;
-      margin-top: 0;
-    }
-  
-    .primeiro__mode {
-      width: 176px;
-      height:242px;
-      background: url("https://i.ibb.co/hRyRfdZ/200170.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      cursor: pointer;
-    }
-  
-    .segundo__mode {
-      width: 230px;
-      height:240px;
-      background: url("https://i.ibb.co/7vVjk0x/201589.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      cursor: pointer;
-    }
-  
+@media screen and (max-width: 600px) {
+  body {
+    background: url("https://i.ibb.co/TTxyPd8/tela-Multiplayer-Mobile.jpg");
+    background-size: cover;
   }
-  
-  @media screen and (max-width: 600px) {
-    body {
-      background: url("https://i.ibb.co/TTxyPd8/tela-Multiplayer-Mobile.jpg");
-      background-size: cover;
-    }
 
-    .aviso {
-      height: 40px;
-      background-color: red;
-      font-size: 18px;
-      text-align: center;
-      padding: 55px;
-    }
+  .aviso {
+    height: 40px;
+    background-color: red;
+    font-size: 18px;
+    text-align: center;
+    padding: 55px;
   }
-  
-  
+}
