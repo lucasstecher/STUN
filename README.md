@@ -15,6 +15,8 @@
 
 <p>Este projeto tem o objetivo de criar melhorias no projeto Trunfo criado durante a ImersãoDev da Alura, criando assim uma aplicação mais completa para a participação na Hackatun Programa de Formação do <a href="https://www.fcamara.com.br/">Grupo FCamara</a></p>
 
+### Observação: A aplicação é compativel com todos navegadores web atuais com exceção do Mozilla Firefox e Internet Explorer (adaptação para o Mozilla Firefox em processo de implementação).
+
 ---
 
 <h3 align="center">
