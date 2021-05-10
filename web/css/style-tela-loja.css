@@ -239,6 +239,16 @@ h4 {
     float: right;
     display: block;
   }
+
+  .boruto:hover,
+  .formulaUno:hover,
+  .hero:hover,
+  .animal:hover,
+  .automovel:hover,
+  .aeronave:hover {
+    width: 280px;
+    height: 400px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -254,7 +264,7 @@ h4 {
   }
 }
 
-/* @media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .logo {
     width: 250px;
     height: 170px;
@@ -267,6 +277,7 @@ h4 {
 
   .container-decks {
     margin-top: 70px;
+    height: 760px;
   }
 
   .boruto:hover,
@@ -278,7 +289,7 @@ h4 {
     width: 200px;
     height: 270px;
   }
-} */
+}
 
 @media screen and (min-width: 1024px) {
   .logo {
@@ -287,18 +298,20 @@ h4 {
     background: url("https://i.ibb.co/yQsqVPz/STUN.png") no-repeat;
     background-size: contain;
 
-    margin-top: -20px;
+    margin-top: -50px;
     z-index: 999;
   }
 
   .container-decks {
     margin-top: 50px;
-    height: 550px;
+    height: 760px;
   }
 
   .boruto:hover,
   .formulaUno:hover,
-  .hero:hover {
+  .hero:hover,
+  .aeronave:hover,
+  .automovel:hover {
     width: 220px;
     height: 290px;
   }
@@ -358,7 +371,9 @@ h4 {
 
   .boruto:hover,
   .formulaUno:hover,
-  .hero:hover {
+  .hero:hover,
+  .automovel:hover,
+  .aeronave:hover {
     width: 280px;
     height: 400px;
   }
