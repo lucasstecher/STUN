@@ -38,7 +38,7 @@
 
 Esta pasta é onde se encontra o front-end da aplicação: Os arquivos HTML - CSS - JS.
 
-## [Acesso a plicação via https://stun.vercel.app](https://stun.vercel.app)
+## Acesso aplicação via [https://stun.vercel.ap](https://stun.vercel.app)
 ### Pastas do projeto
 
 ```
