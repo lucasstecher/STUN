@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function gameDocument(e) {
   let deck = e.target.id;
   let nickname = getName();
-  window.location = `http://127.0.0.1:5501/web/components/telaJogo.html?deck=${deck}&nickname=${nickname}`;
+  window.location = `https://stun.vercel.app/components/telaJogo.html?deck=${deck}&nickname=${nickname}`;
 }
 
 function getName() {
